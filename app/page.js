@@ -7,7 +7,7 @@ export default function HomePage() {
       <section className="wrap hero">
         <div>
           <p className="kicker">GoHighLevel pour infopreneurs francophones</p>
-          <h1>Ta stack te freine. On la reconstruit en un seul outil.</h1>
+          <h1>Ta stack te freine. On la reconstruit en <span className="accent">un seul outil.</span></h1>
           <p className="lede">
             ProMarket migre les coachs, formateurs et créateurs depuis Kajabi, Systeme.io ou ActiveCampaign vers GoHighLevel — sans couper les accès élèves, sans broadcast qui grille le domaine.
           </p>
