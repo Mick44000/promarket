@@ -2,8 +2,9 @@ import Link from "next/link";
 import { guides } from "@/lib/guides";
 
 export const metadata = {
-  title: "Guide GoHighLevel en français",
-  description: "Guides ProMarket : prix GoHighLevel, migration Kajabi et Systeme.io, SaaS mode, RGPD, délivrabilité et espace membres.",
+  title: "Guide GoHighLevel France",
+  description:
+    "La référence GoHighLevel en français : prix, migrations Kajabi et Systeme.io, SaaS mode, RGPD, délivrabilité, SEO, GEO et agents IA.",
   alternates: { canonical: "/guide" },
 };
 
@@ -11,8 +12,8 @@ export default function GuideIndex() {
   return (
     <main className="wrap article">
       <p className="kicker">Guide</p>
-      <h1>GoHighLevel, version exploitation française.</h1>
-      <p className="lede">Pas un clone des tutos US. Prix, migration, facture, RGPD, email. Chaque article renvoie vers l’audit, pas vers un lien d’affiliation nu.</p>
+      <h1>GoHighLevel France, version exploitation.</h1>
+      <p className="lede">La référence francophone : prix, migration, facture, RGPD, email, SEO, GEO et agents IA. Chaque article mène à l’audit, pas à un lien d’affiliation.</p>
       <div className="grid-2" style={{ marginTop: 22 }}>
         {guides.map((g) => (
           <Link key={g.slug} href={`/guide/${g.slug}`} className="card" style={{ textDecoration: "none" }}>

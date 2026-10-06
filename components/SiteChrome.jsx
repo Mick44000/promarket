@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { nav, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -17,11 +17,10 @@ export function Header() {
           Menu
         </button>
         <div className="nav-links">
-          {nav.map((item) => (
-            <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
-              {item.label}
-            </Link>
-          ))}
+          <Link href="/guide">GoHighLevel</Link>
+          <Link href="/#perimetre">Services</Link>
+          <Link href="/#apropos">À propos</Link>
+          <Link href="/referencement">SEO & GEO</Link>
           <a href="/#appel" className="btn" onClick={() => setOpen(false)}>
             Réserver un appel
           </a>
@@ -44,6 +43,7 @@ export function Footer() {
         </div>
         <div style={{ display: "grid", gap: 6 }}>
           <Link href="/guide">Guide</Link>
+          <Link href="/referencement">SEO & GEO</Link>
           <Link href="/mentions-legales">Mentions légales</Link>
           <Link href="/confidentialite">Confidentialité</Link>
           <Link href="/cgv">CGV</Link>

@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Services migration et setup GoHighLevel",
-  description: "Migration Kajabi, Systeme.io, ActiveCampaign, setup espace membres, délivrabilité et SaaS mode. Accompagnement francophone ProMarket.",
+  description: "Migration Kajabi, Systeme.io, ActiveCampaign, setup espace membres, délivrabilité, SaaS mode, SEO, GEO et agents IA. Accompagnement francophone ProMarket.",
+  alternates: { canonical: "/services" },
 };
 
 const offers = [
@@ -10,6 +11,7 @@ const offers = [
   ["Setup from scratch", "Domaine, pipelines, tunnels, checkout Stripe, workflows d’onboarding. Pour un lancement qui n’a pas encore d’outil."],
   ["Délivrabilité", "SPF, DKIM, DMARC, sous-domaine d’envoi, plan de warm-up. On ne relance pas les inactifs le jour 1."],
   ["SaaS mode", "Pour ceux qui facturent des sous-comptes. Agency Pro, snapshot, encaissement en euros via ta société. Page instituts à part."],
+  ["SEO, GEO et agents IA", "Pages indexables, contenus citables par les IA, agent qui qualifie et écrit dans le CRM GoHighLevel."],
 ];
 
 export default function ServicesPage() {

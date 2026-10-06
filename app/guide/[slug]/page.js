@@ -23,12 +23,29 @@ export default function GuidePage({ params }) {
   if (!guide) notFound();
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: guide.title,
-    datePublished: guide.date,
-    description: guide.description,
-    author: { "@type": "Organization", name: "ProMarket" },
-    mainEntityOfPage: `https://promarket.fr/guide/${guide.slug}`,
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: guide.title,
+        datePublished: guide.date,
+        inLanguage: "fr-FR",
+        description: guide.description,
+        keywords: guide.keywords?.join(", "),
+        author: { "@type": "Person", name: "Aymeric Chantrel" },
+        publisher: { "@type": "Organization", name: "ProMarket", url: "https://promarket.fr" },
+        mainEntityOfPage: `https://promarket.fr/guide/${guide.slug}`,
+      },
+      ...(guide.faq?.length
+        ? [{
+            "@type": "FAQPage",
+            mainEntity: guide.faq.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          }]
+        : []),
+    ],
   };
   const related = guides.filter((g) => g.slug !== guide.slug).slice(0, 3);
   return (

@@ -1,5 +1,13 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: { absolute: "GoHighLevel France : expert setup, migration, SEO et agents IA | ProMarket" },
+  description:
+    "Référence GoHighLevel en France. Migration, setup, délivrabilité, SEO, GEO et agents IA pour coachs et infopreneurs francophones. Audit à Nantes, à distance.",
+  alternates: { canonical: "/" },
+  keywords: ["GoHighLevel France", "expert GoHighLevel", "migration GoHighLevel", "SEO GEO", "agent IA"],
+};
+
 const personas = [
   ["Débutant sur GHL", "Nouveau sur GHL", "Setup complet", "Vous venez de souscrire à GoHighLevel ou vous y pensez. Vous avez besoin d’un setup propre dès le départ, sans passer des semaines à apprendre."],
   ["Déjà sur GHL, mais sous-utilisé", "Audit & optimisation", "Migration", "Vous payez GHL depuis des mois mais n’utilisez que 20 % de ses fonctionnalités. Il est temps d’en tirer la valeur réelle."],
@@ -28,11 +36,27 @@ const faqs = [
   ["Que se passe-t-il si j’ai besoin d’aide après le setup ?", "Le suivi mensuel démarre à 300 € par mois, à partir de 3 h. Maintenance, évolutions et support, avec un suivi dans Copilot."],
   ["Travaillez-vous à distance uniquement ?", "Oui. Remote, depuis la France. Les accès se font sur votre sous-compte, rien ne transite par une machine partagée."],
   ["L’audit est-il déduit du setup si on continue ensemble ?", "Non. L’audit est un forfait à part, 1 000 € HT, avec un livrable. Le setup est chiffré ensuite, sur devis, selon le périmètre exact."],
+  ["GoHighLevel est-il adapté à un infopreneur en France ?", "Oui, à condition de traiter la facture en euros, la TVA, les SMS français, la délivrabilité et le RGPD. L’interface reste surtout en anglais. Le setup, lui, est en français."],
+  ["Vous faites le SEO, le GEO et les agents IA ?", "Oui. Le SEO structure les pages pour Google. Le GEO les rend citables par les IA. L’agent qualifie et écrit dans le CRM GoHighLevel. Le détail est sur la page Référencement."],
 ] ;
 
 export default function HomePage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(([q, a]) => ({
+              "@type": "Question",
+              name: q,
+              acceptedAnswer: { "@type": "Answer", text: a },
+            })),
+          }),
+        }}
+      />
       <section className="wrap hero">
         <div>
           <p className="crumb">
@@ -276,6 +300,34 @@ export default function HomePage() {
                 <li>Réactivité cadrée</li>
               </ul>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="band" id="acquisition" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <p className="kicker">Référence France</p>
+          <h2>GoHighLevel, SEO, GEO et agents IA.</h2>
+          <p className="lede">
+            ProMarket est la couche francophone de GoHighLevel : le compte, puis la visibilité. Google pour le SEO, les
+            réponses des IA pour le GEO, un agent qui qualifie dans le CRM.
+          </p>
+          <div className="grid-3" style={{ marginTop: 22 }}>
+            <Link href="/guide/gohighlevel-france" className="card" style={{ textDecoration: "none" }}>
+              <p className="scope-label">Guide</p>
+              <h3 style={{ marginTop: 8 }}>GoHighLevel en France</h3>
+              <p className="muted">Prix en dollars, facture en euros, TVA, SMS, RGPD, SaaS mode.</p>
+            </Link>
+            <Link href="/referencement" className="card" style={{ textDecoration: "none" }}>
+              <p className="scope-label">Offre</p>
+              <h3 style={{ marginTop: 8 }}>SEO et GEO</h3>
+              <p className="muted">Des pages que Google indexe et que les IA peuvent citer.</p>
+            </Link>
+            <Link href="/guide/seo-geo-agent-ia-gohighlevel" className="card" style={{ textDecoration: "none" }}>
+              <p className="scope-label">Agent</p>
+              <h3 style={{ marginTop: 8 }}>Agent IA dans GHL</h3>
+              <p className="muted">Qualification, rendez-vous, passage à un humain. Branché au pipeline.</p>
+            </Link>
           </div>
         </div>
       </section>

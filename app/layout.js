@@ -10,18 +10,17 @@ const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variabl
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Expert GoHighLevel francophone — migration et setup | ProMarket",
+    default: "GoHighLevel France : expert setup, migration et SEO | ProMarket",
     template: "%s | ProMarket",
   },
   description:
-    "ProMarket migre les coachs et infopreneurs francophones vers GoHighLevel : Kajabi, Systeme.io, ActiveCampaign. Setup, délivrabilité, espace membres. Audit gratuit.",
-  alternates: { canonical: "/" },
+    "Référence GoHighLevel en France. ProMarket installe, migre et référence les comptes des infopreneurs francophones : CRM, délivrabilité, SEO, GEO et agents IA.",
   openGraph: {
     type: "website",
     locale: "fr_FR",
     siteName: "ProMarket",
-    title: "Expert GoHighLevel francophone — ProMarket",
-    description: "Migration et setup GoHighLevel pour infopreneurs. Un outil, une facture, zéro perte d’accès.",
+    title: "GoHighLevel France — ProMarket",
+    description: "Setup, migration, SEO, GEO et agents IA pour infopreneurs francophones.",
     url: site.url,
   },
   robots: { index: true, follow: true },
@@ -30,13 +29,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["ProfessionalService", "Organization"],
     name: "ProMarket",
     url: site.url,
     email: site.email,
     areaServed: ["FR", "BE", "CH", "CA"],
-    description: "Migration et setup GoHighLevel pour infopreneurs francophones.",
-    founder: site.founder,
+    description:
+      "Référence opérationnelle GoHighLevel en France : migration, setup, SEO, GEO et agents IA pour infopreneurs francophones.",
+    founder: { "@type": "Person", name: site.founder },
+    knowsAbout: ["GoHighLevel", "HighLevel", "migration Kajabi", "SEO", "GEO", "agents IA"],
     address: { "@type": "PostalAddress", streetAddress: "Bureau 3, 2 place Jean V", addressLocality: "Nantes", postalCode: "44100", addressCountry: "FR" },
   };
   return (
