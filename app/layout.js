@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Fraunces, Sora, IBM_Plex_Mono } from "next/font/google";
-import { Header, Footer, CookieBar } from "@/components/SiteChrome";
+import { Header, CookieBar } from "@/components/SiteChrome";
+import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
 
 const serif = Fraunces({ subsets: ["latin"], variable: "--font-serif", axes: ["SOFT", "WONK"] });

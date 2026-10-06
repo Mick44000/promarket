@@ -199,7 +199,11 @@ export default function HomePage() {
         <div className="wrap">
           <p className="kicker">Périmètre</p>
           <h2>Ce que je configure pour vous</h2>
-          <p className="lede">Chaque projet commence par un audit. Voici les blocs couverts — tout ou partie, selon votre situation.</p>
+          <p className="lede">
+            Chaque projet commence par un audit. Voici les blocs couverts — tout ou partie, selon votre situation. Le détail
+            est sur les pages <Link href="/services">Services</Link> et <Link href="/methode">Méthode</Link>. Les centres
+            laser et instituts ont une <Link href="/instituts">offre à part</Link>.
+          </p>
           <div className="grid-3" style={{ marginTop: 22 }}>
             {scopes.map(([label, title, text, ticks]) => (
               <article className="card" key={label}>
@@ -249,7 +253,11 @@ export default function HomePage() {
 
       <section className="band" id="apropos" style={{ paddingTop: 0 }}>
         <div className="wrap about">
-          <img src="/aymeric.jpg" alt="Aymeric Chantrel, fondateur de ProMarket" />
+          <img
+            src="/aymeric.jpg"
+            alt="Aymeric Chantrel, fondateur de ProMarket"
+            title="Aymeric Chantrel, fondateur de ProMarket"
+          />
           <div>
             <p className="kicker">À propos</p>
             <h2>Aymeric Chantrel</h2>
@@ -311,6 +319,12 @@ export default function HomePage() {
           <p className="lede">
             ProMarket est la couche francophone de GoHighLevel : le compte, puis la visibilité. Google pour le SEO, les
             réponses des IA pour le GEO, un agent qui qualifie dans le CRM.
+          </p>
+          <p className="lede">
+            Trois portes d’entrée : <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>,{" "}
+            <Link href="/migration-gohighlevel">la migration vers GoHighLevel</Link> et{" "}
+            <Link href="/crm-coachs">le CRM pour coachs et formateurs</Link>. Le sommaire des articles est sur le{" "}
+            <Link href="/guide">guide</Link>.
           </p>
           <div className="grid-3" style={{ marginTop: 22 }}>
             <Link href="/guide/gohighlevel-france" className="card" style={{ textDecoration: "none" }}>
