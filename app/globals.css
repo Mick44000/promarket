@@ -82,6 +82,7 @@ h3 { font-size: 26px; margin: 0 0 8px; }
   box-shadow: 0 30px 80px rgba(91, 33, 182, 0.28);
 }
 .portrait-meta { margin-top: 14px; }
+.portrait-meta .kicker { margin: 0 0 6px; }
 .portrait-meta p { margin: 0; color: var(--ink-soft); font-size: 14.5px; }
 .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
 .stat { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 12px; }
