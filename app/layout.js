@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
     areaServed: ["FR", "BE", "CH", "CA"],
     description: "Migration et setup GoHighLevel pour infopreneurs francophones.",
     founder: site.founder,
-    address: { "@type": "PostalAddress", streetAddress: "2 place Jean V", addressLocality: "Nantes", postalCode: "44000", addressCountry: "FR" },
+    address: { "@type": "PostalAddress", streetAddress: "Bureau 3, 2 place Jean V", addressLocality: "Nantes", postalCode: "44100", addressCountry: "FR" },
   };
   return (
     <html lang="fr" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>

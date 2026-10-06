@@ -39,7 +39,7 @@ export function Footer() {
           <strong style={{ color: "var(--ink)" }}>{site.name}</strong>
           <p style={{ margin: "6px 0 0", maxWidth: 460 }}>
             Setup, migration et audit GoHighLevel. Indépendant de HighLevel, LLC. © {new Date().getFullYear()} Promarket.
-            Marque de {site.editor}, {site.legalForm} — SIREN {site.siren}.
+            Promarket est une marque de MCA {site.legalForm} — SIREN {site.siren}.
           </p>
         </div>
         <div style={{ display: "grid", gap: 6 }}>
