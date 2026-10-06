@@ -11,7 +11,7 @@ export const metadata = {
 const faqs = [
   [
     "Faut-il être à Nantes pour travailler ensemble ?",
-    "Non. Les accès se font sur votre sous-compte, à distance. On intervient pour les équipes francophones en France, en Belgique, en Suisse et au Canada.",
+    "Non. Le siège de MCA, la société qui porte Promarket, est au 2 place Jean V, 44100 Nantes. Les accès se font sur votre sous-compte, à distance. On intervient pour les équipes francophones en France, en Belgique, en Suisse et au Canada.",
   ],
   [
     "ProMarket vend-il la licence GoHighLevel ?",
@@ -45,7 +45,7 @@ export default function AgencePage() {
       <h1>Une agence GoHighLevel à Nantes, pour les équipes francophones.</h1>
       <p className="lede">
         ProMarket pose le compte : domaine, CRM, emails, tunnels, espace membres, paiement. Vous gardez l’offre et la
-        relation avec vos clients. Le travail est à distance, depuis Nantes.
+        relation avec vos clients. Le travail est à distance. Le siège est à Nantes.
       </p>
 
       <h2>Ce que « agence » veut dire ici</h2>
@@ -79,7 +79,7 @@ export default function AgencePage() {
         <Link href="/instituts">Instituts</Link>.
       </p>
       <p>
-        Être à Nantes fixe le fuseau et la langue. Ça ne fixe pas une zone de chalandise. Les accès se font sur
+        Être à Nantes fixe le siège, le fuseau et la langue. Ça ne fixe pas une zone de chalandise. Les accès se font sur
         votre sous-compte. Rien ne transite par une machine partagée. Si vous êtes à Lyon, à Bruxelles ou à Montréal, le
         déroulé est le même, tant que les textes et les élèves sont en français.
       </p>

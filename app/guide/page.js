@@ -67,7 +67,7 @@ export default function GuideIndex() {
       </p>
       <p>
         On l’écrit pour les coachs, les formateurs et les business en ligne qui empilent déjà Kajabi, Systeme.io,
-        ActiveCampaign, Calendly ou Zapier. Le travail se fait à distance, depuis Nantes, pour les
+        ActiveCampaign, Calendly ou Zapier. Le siège de ProMarket est à Nantes. Le travail se fait à distance, pour les
         équipes francophones en France, en Belgique, en Suisse et au Canada. L’interface du logiciel reste surtout en
         anglais. Les pages, les mails et l’accompagnement sont en français.
       </p>

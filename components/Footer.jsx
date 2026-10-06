@@ -27,7 +27,7 @@ export function Footer() {
           <strong style={{ color: "var(--ink)" }}>{site.name}</strong>
           <p style={{ margin: "6px 0 0", maxWidth: 360 }}>
             Setup, migration et audit GoHighLevel pour les infopreneurs francophones. Indépendant de HighLevel, LLC. ©{" "}
-            {new Date().getFullYear()} {site.name}.
+            {new Date().getFullYear()} Promarket. Promarket est une marque de MCA {site.legalForm} — SIREN {site.siren}.
           </p>
         </div>
         <nav aria-label="Offre">
