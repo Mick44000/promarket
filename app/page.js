@@ -16,10 +16,12 @@ export default function HomePage() {
             <Link className="btn ghost" href="/methode">Voir la méthode</Link>
           </div>
         </div>
-        <aside className="hero-card">
-          <p className="kicker" style={{ color: "#f0a090" }}>Aymeric Chantrel</p>
-          <h2 style={{ fontSize: 32, color: "#fffaf3" }}>Partenaire technique, pas coach business.</h2>
-          <p>Tu gardes la méthode. On pose le CRM, les tunnels, l’espace membres, les paiements et les relances.</p>
+        <aside className="portrait">
+          <img src="/aymeric.jpg" alt="Aymeric Chantrel, fondateur de ProMarket" />
+          <div className="portrait-meta">
+            <p className="kicker">Aymeric Chantrel</p>
+            <p>Partenaire technique, pas coach business. Tu gardes la méthode. On pose le CRM, les tunnels, l’espace membres et les paiements.</p>
+          </div>
           <div className="stat-row">
             <div className="stat"><b>14 j</b><span>setup cible</span></div>
             <div className="stat"><b>1 outil</b><span>à la place de 5</span></div>
