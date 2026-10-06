@@ -28,7 +28,7 @@ export default function InstitutsPage() {
       </div>
       <p className="note">Prix de setup ProMarket, pas le prix de la licence HighLevel. La plateforme reste facturée à part, en dollars, selon le plan. Le principe de facturation en euros, sous ta marque, est le même que dans le guide <Link href="/guide/saas-mode-gohighlevel-france">SaaS mode</Link>.</p>
       <p>
-        Le siège est à Nantes. Le travail sur les comptes se fait à distance, comme pour le reste de l’activité. Le cadre est sur la page <Link href="/agence-gohighlevel-nantes">agence</Link>. Pour décrire le centre avant un échange, le formulaire d’<Link href="/audit">audit</Link> reprend les outils et l’objectif.
+        Le travail sur les comptes se fait à distance, depuis Nantes, comme pour le reste de l’activité. Le cadre est sur la page <Link href="/agence-gohighlevel-nantes">agence</Link>. Pour décrire le centre avant un échange, le formulaire d’<Link href="/audit">audit</Link> reprend les outils et l’objectif.
       </p>
       <p><Link className="btn" href="/audit">Demander un diagnostic institut</Link></p>
     </main>

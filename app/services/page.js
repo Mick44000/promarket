@@ -21,8 +21,8 @@ export default function ServicesPage() {
       <h1>On installe la machine. Tu gardes l’expertise.</h1>
       <p className="lede">Pas de coaching business. Un partenaire technique GoHighLevel, à distance, en français.</p>
       <p>
-        L’ordre de bascule est sur la page <Link href="/methode">Méthode</Link>. Le siège est à Nantes, le détail local
-        est sur <Link href="/agence-gohighlevel-nantes">l’agence</Link>. Les centres laser et instituts ne sont pas dans
+        L’ordre de bascule est sur la page <Link href="/methode">Méthode</Link>. Le détail local
+        est sur <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>. Les centres laser et instituts ne sont pas dans
         ce parcours : ils ont une <Link href="/instituts">offre séparée</Link>.
       </p>
       <div className="grid-2" style={{ marginTop: 24 }}>

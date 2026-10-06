@@ -6,36 +6,30 @@ export default function Mentions() {
   return (
     <main className="wrap-s article">
       <h1>Mentions légales</h1>
-      <p>Promarket est une marque de MCA {site.legalForm}.</p>
+      <p>Le site {site.url.replace("https://", "")} est édité sous le nom {site.name}.</p>
 
       <h2>Éditeur du site</h2>
       <p>
-        Le site {site.url.replace("https://", "")} est édité par <strong>MCA</strong>, société à responsabilité limitée
-        ({site.legalForm}) au capital de {site.capital}.
+        Dénomination de l’éditeur : [À compléter]
+        <br />
+        Forme juridique : [À compléter]
+        <br />
+        Capital social : [À compléter]
+        <br />
+        Siège social : [À compléter]
+        <br />
+        SIREN : [À compléter]
+        <br />
+        SIRET : [À compléter]
+        <br />
+        RCS : [À compléter]
       </p>
       <p>
-        Nom commercial : Mon courtier assure, Promarket.
-        <br />
-        Siège social : {site.address}.
-        <br />
-        SIREN : 853 091 262 — SIRET du siège : 853 091 262 00032.
-        <br />
-        RCS {site.rcs}.
-        <br />
-        Code APE / NAF : {site.naf} (activités des agents et courtiers d’assurances).
-        <br />
-        Gérant : Aymeric Chantrel.
-      </p>
-      <p>
-        Source :{" "}
-        <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/mca-mon-courtier-assure-promarket-mca-853091262">
-          Annuaire des entreprises
-        </a>
-        .
+        Contact : <a href={`mailto:${site.email}`}>{site.email}</a>.
       </p>
 
       <h2>Directeur de la publication</h2>
-      <p>Aymeric Chantrel, gérant de MCA {site.legalForm}.</p>
+      <p>{site.founder}.</p>
       <p>
         Contact : <a href={`mailto:${site.email}`}>{site.email}</a>.
       </p>
@@ -48,9 +42,8 @@ export default function Mentions() {
 
       <h2>Marques et indépendance</h2>
       <p>
-        Promarket est une marque exploitée par MCA {site.legalForm}. Le site est indépendant de HighLevel, LLC.
-        GoHighLevel et HighLevel sont des marques de leur titulaire. MCA n’est pas responsable d’une indisponibilité de
-        la plateforme.
+        {site.name} est indépendant de HighLevel, LLC. GoHighLevel et HighLevel sont des marques de leur titulaire.{" "}
+        {site.name} n’est pas responsable d’une indisponibilité de la plateforme.
       </p>
       <p>Les textes du guide sont fournis à titre opérationnel. Ils ne constituent pas un conseil juridique ou fiscal.</p>
     </main>

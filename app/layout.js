@@ -39,7 +39,6 @@ export default function RootLayout({ children }) {
       "Référence opérationnelle GoHighLevel en France : migration, setup, SEO, GEO et agents IA pour infopreneurs francophones.",
     founder: { "@type": "Person", name: site.founder },
     knowsAbout: ["GoHighLevel", "HighLevel", "migration Kajabi", "SEO", "GEO", "agents IA"],
-    address: { "@type": "PostalAddress", streetAddress: "Bureau 3, 2 place Jean V", addressLocality: "Nantes", postalCode: "44100", addressCountry: "FR" },
   };
   return (
     <html lang="fr" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
