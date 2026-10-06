@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Fraunces, Sora, IBM_Plex_Mono } from "next/font/google";
-import { Header, Footer } from "@/components/SiteChrome";
+import { Header, Footer, CookieBar } from "@/components/SiteChrome";
 import { site } from "@/lib/site";
 
 const serif = Fraunces({ subsets: ["latin"], variable: "--font-serif", axes: ["SOFT", "WONK"] });
@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <CookieBar />
       </body>
     </html>
   );

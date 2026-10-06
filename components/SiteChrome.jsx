@@ -1,23 +1,30 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { nav, site } from "@/lib/site";
 
 export function Header() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="wrap">
-      <nav className="nav">
-        <Link href="/" className="brand">
+      <nav className={open ? "nav open" : "nav"}>
+        <Link href="/" className="brand" onClick={() => setOpen(false)}>
           <img className="mark" src="/favicon.svg" alt="" />
           ProMarket
         </Link>
+        <button type="button" className="nav-toggle" aria-expanded={open} aria-label="Menu" onClick={() => setOpen((v) => !v)}>
+          Menu
+        </button>
         <div className="nav-links">
           {nav.map((item) => (
-            <Link key={item.href} href={item.href}>
+            <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
               {item.label}
             </Link>
           ))}
-          <Link href="/audit" className="btn">
-            Audit gratuit
-          </Link>
+          <a href="/#appel" className="btn" onClick={() => setOpen(false)}>
+            Réserver un appel
+          </a>
         </div>
       </nav>
     </div>
@@ -31,7 +38,7 @@ export function Footer() {
         <div>
           <strong style={{ color: "var(--ink)" }}>{site.name}</strong>
           <p style={{ margin: "6px 0 0", maxWidth: 460 }}>
-            Migration et setup GoHighLevel pour infopreneurs francophones. Indépendant de HighLevel, LLC.
+            Setup, migration et audit GoHighLevel. Indépendant de HighLevel, LLC. © {new Date().getFullYear()} Promarket.
             Marque de {site.editor}, {site.legalForm} — SIREN {site.siren}.
           </p>
         </div>
@@ -43,5 +50,33 @@ export function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+export function CookieBar() {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (!localStorage.getItem("promarket-cookies")) setOpen(true);
+  }, []);
+  if (!open) return null;
+  const choose = (value) => {
+    localStorage.setItem("promarket-cookies", value);
+    setOpen(false);
+  };
+  return (
+    <div className="cookie" role="dialog" aria-label="Cookies">
+      <p>
+        Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous consentez aux cookies. Refuser
+        bloque les cookies non essentiels.
+      </p>
+      <div className="cookie-actions">
+        <button type="button" className="btn ghost" onClick={() => choose("no")}>
+          Refuser
+        </button>
+        <button type="button" className="btn" onClick={() => choose("ok")}>
+          Confirmer
+        </button>
+      </div>
+    </div>
   );
 }
