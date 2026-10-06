@@ -49,6 +49,10 @@ export default function ReferencementPage() {
         <Link className="btn" href="/audit">Commander l’audit</Link>
         <Link className="btn ghost" href="/guide">Lire le guide</Link>
       </div>
+      <p>
+        Le référencement suppose un compte déjà lisible. S’il est encore à poser, passe par les{" "}
+        <Link href="/services">services</Link> ou par <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>.
+      </p>
     </main>
   );
 }

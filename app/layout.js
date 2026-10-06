@@ -1,7 +1,11 @@
 import "./globals.css";
+import Script from "next/script";
 import { Fraunces, Sora, IBM_Plex_Mono } from "next/font/google";
-import { Header, Footer, CookieBar } from "@/components/SiteChrome";
+import { Header, CookieBar } from "@/components/SiteChrome";
+import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
+
+const GA_ID = "G-5RCCZSCZ2N";
 
 const serif = Fraunces({ subsets: ["latin"], variable: "--font-serif", axes: ["SOFT", "WONK"] });
 const sans = Sora({ subsets: ["latin"], variable: "--font-sans" });
@@ -48,6 +52,13 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <CookieBar />
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="ga4" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`}
+        </Script>
       </body>
     </html>
   );

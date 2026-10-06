@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { RichText } from "@/components/RichText";
 import { guides, getGuide } from "@/lib/guides";
 
 export function generateStaticParams() {
@@ -47,10 +48,19 @@ export default function GuidePage({ params }) {
         : []),
     ],
   };
-  const related = guides.filter((g) => g.slug !== guide.slug).slice(0, 3);
+  const related = (guide.related || [])
+    .map((slug) => getGuide(slug))
+    .filter(Boolean);
   return (
     <main className="wrap-s article">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <p className="crumb">
+        <Link href="/">Accueil</Link>
+        {" › "}
+        <Link href="/guide">Guide</Link>
+        {" › "}
+        {guide.nav}
+      </p>
       <p className="kicker">{guide.category}</p>
       <h1>{guide.title}</h1>
       <p className="meta"><span>{guide.date}</span><span>{guide.reading}</span></p>
@@ -58,30 +68,45 @@ export default function GuidePage({ params }) {
       {guide.sections.map((s) => (
         <section key={s.h}>
           <h2>{s.h}</h2>
-          {s.p.map((para) => <p key={para.slice(0, 24)}>{para}</p>)}
+          {s.p.map((para) => (
+            <p key={para.slice(0, 40)}>
+              <RichText text={para} />
+            </p>
+          ))}
         </section>
       ))}
       {guide.faq?.length ? (
         <section>
-          <h2>Questions fréquentes</h2>
+          <p className="kicker">Questions fréquentes</p>
           {guide.faq.map((f) => (
-            <div key={f.q}>
-              <h3>{f.q}</h3>
+            <details className="qa" key={f.q}>
+              <summary>{f.q}</summary>
               <p>{f.a}</p>
-            </div>
+            </details>
           ))}
         </section>
       ) : null}
-      <p className="note">ProMarket est indépendant de HighLevel, LLC. Les prix plateforme cités sont les tarifs publics en dollars, hors usage, relevés en octobre 2026.</p>
+      <p className="note">ProMarket est indépendant de HighLevel, LLC. Les prix plateforme cités sont les tarifs publics en dollars, hors usage, relevés en octobre 2026. Les textes décrivent une méthode d’installation. Ils ne sont pas un conseil juridique ou fiscal.</p>
+      <p>
+        La mise en œuvre est sur les pages <Link href="/services">Services</Link>, <Link href="/methode">Méthode</Link> et{" "}
+        <Link href="/audit">Audit de stack</Link>. Le cadre francophone est résumé dans{" "}
+        <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>.
+      </p>
       <p><Link className="btn" href="/audit">Faire l’audit de ta stack</Link></p>
-      <div className="grid-2" style={{ marginTop: 28 }}>
-        {related.map((g) => (
-          <Link key={g.slug} href={`/guide/${g.slug}`} className="card" style={{ textDecoration: "none" }}>
-            <div className="tag">{g.category}</div>
-            <h3 style={{ fontSize: 20 }}>{g.title}</h3>
-          </Link>
-        ))}
-      </div>
+      {related.length ? (
+        <nav aria-label="Articles liés">
+          <p className="kicker">À lire ensuite</p>
+          <div className="grid-2" style={{ marginTop: 12 }}>
+            {related.map((g) => (
+              <Link key={g.slug} href={`/guide/${g.slug}`} className="card" style={{ textDecoration: "none" }}>
+                <div className="tag">{g.category}</div>
+                <p className="card-title">{g.nav}</p>
+                <p className="muted">{g.description}</p>
+              </Link>
+            ))}
+          </div>
+        </nav>
+      ) : null}
     </main>
   );
 }

@@ -1,12 +1,12 @@
 import { guides } from "@/lib/guides";
-import { site } from "@/lib/site";
+import { indexableRoutes, site } from "@/lib/site";
 
 export default function sitemap() {
-  const staticRoutes = ["", "/services", "/methode", "/guide", "/audit", "/instituts", "/referencement"].map((path) => ({
-    url: `${site.url}${path || "/"}`,
+  const staticRoutes = indexableRoutes.map((route) => ({
+    url: route.path === "/" ? site.url : `${site.url}${route.path}`,
     lastModified: new Date("2026-10-06"),
-    changeFrequency: "weekly",
-    priority: path === "" ? 1 : 0.7,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
   }));
   const articles = guides.map((g) => ({
     url: `${site.url}/guide/${g.slug}`,

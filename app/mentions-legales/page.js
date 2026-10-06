@@ -14,7 +14,7 @@ export default function Mentions() {
         ({site.legalForm}) au capital de {site.capital}.
       </p>
       <p>
-        Nom commercial : Mon courtier assure, Promarket.
+        Nom commercial : Promarket.
         <br />
         Siège social : {site.address}.
         <br />
@@ -25,13 +25,6 @@ export default function Mentions() {
         Code APE / NAF : {site.naf} (activités des agents et courtiers d’assurances).
         <br />
         Gérant : Aymeric Chantrel.
-      </p>
-      <p>
-        Source :{" "}
-        <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/mca-mon-courtier-assure-promarket-mca-853091262">
-          Annuaire des entreprises
-        </a>
-        .
       </p>
 
       <h2>Directeur de la publication</h2>

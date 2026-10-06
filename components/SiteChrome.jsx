@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { site } from "@/lib/site";
+import { nav } from "@/lib/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -10,46 +10,24 @@ export function Header() {
     <div className="wrap">
       <nav className={open ? "nav open" : "nav"}>
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
-          <img className="mark" src="/favicon.svg" alt="" />
+          <img className="mark" src="/favicon.svg" alt="ProMarket" title="ProMarket" />
           ProMarket
         </Link>
         <button type="button" className="nav-toggle" aria-expanded={open} aria-label="Menu" onClick={() => setOpen((v) => !v)}>
           Menu
         </button>
         <div className="nav-links">
-          <Link href="/guide">GoHighLevel</Link>
-          <Link href="/#perimetre">Services</Link>
-          <Link href="/#apropos">À propos</Link>
-          <Link href="/referencement">SEO & GEO</Link>
-          <a href="/#appel" className="btn" onClick={() => setOpen(false)}>
-            Réserver un appel
-          </a>
+          {nav.map((item) => (
+            <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
+              {item.label}
+            </Link>
+          ))}
+          <Link href="/audit" className="btn" onClick={() => setOpen(false)}>
+            Audit de stack
+          </Link>
         </div>
       </nav>
     </div>
-  );
-}
-
-export function Footer() {
-  return (
-    <footer className="site">
-      <div className="wrap foot">
-        <div>
-          <strong style={{ color: "var(--ink)" }}>{site.name}</strong>
-          <p style={{ margin: "6px 0 0", maxWidth: 460 }}>
-            Setup, migration et audit GoHighLevel. Indépendant de HighLevel, LLC. © {new Date().getFullYear()} Promarket.
-            Promarket est une marque de MCA {site.legalForm} — SIREN {site.siren}.
-          </p>
-        </div>
-        <div style={{ display: "grid", gap: 6 }}>
-          <Link href="/guide">Guide</Link>
-          <Link href="/referencement">SEO & GEO</Link>
-          <Link href="/mentions-legales">Mentions légales</Link>
-          <Link href="/confidentialite">Confidentialité</Link>
-          <Link href="/cgv">CGV</Link>
-        </div>
-      </div>
-    </footer>
   );
 }
 

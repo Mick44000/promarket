@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.promarket.fr" }],
+      "destination": "https://promarket.fr/:path*",
+      "statusCode": 301
+    },
+    { "source": "/mentions-legales726363", "destination": "/mentions-legales", "statusCode": 301 },
+    { "source": "/mentions-legales726363/", "destination": "/mentions-legales", "statusCode": 301 },
+    { "source": "/auditmarketing", "destination": "/audit", "statusCode": 301 },
+    { "source": "/auditmarketing/", "destination": "/audit", "statusCode": 301 },
+    { "source": "/contact", "destination": "/", "statusCode": 301 },
+    { "source": "/contact/", "destination": "/", "statusCode": 301 },
+    { "source": "/gohighlevel", "destination": "/guide/gohighlevel-france", "statusCode": 301 },
+    { "source": "/gohighlevel/", "destination": "/guide/gohighlevel-france", "statusCode": 301 },
+    { "source": "/microsoft", "destination": "/services", "statusCode": 301 },
+    { "source": "/microsoft/", "destination": "/services", "statusCode": 301 },
+    { "source": "/module", "destination": "/guide/espace-membres-gohighlevel", "statusCode": 301 },
+    { "source": "/module/", "destination": "/guide/espace-membres-gohighlevel", "statusCode": 301 },
+    { "source": "/siteweb", "destination": "/services", "statusCode": 301 },
+    { "source": "/siteweb/", "destination": "/services", "statusCode": 301 }
+  ]
+}
