@@ -6,7 +6,7 @@ export function Header() {
     <div className="wrap">
       <nav className="nav">
         <Link href="/" className="brand">
-          <span className="mark">P</span>
+          <img className="mark" src="/favicon.svg" alt="" />
           ProMarket
         </Link>
         <div className="nav-links">
