@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RelatedContent } from "@/components/RelatedContent";
 
 export const metadata = {
   title: "Migration vers GoHighLevel",
@@ -122,12 +123,59 @@ export default function MigrationPage() {
         <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>.
       </p>
 
+      <h2>Selon l’outil de départ</h2>
+      <p>
+        Kajabi : les contacts et les produits s’exportent. Les pages, les automations visuelles et la progression fine
+        des leçons se reconstruisent. On ouvre les modules déjà payés, on teste un élève fictif, et seulement ensuite on
+        prévient la liste. Le guide <Link href="/guide/migration-kajabi-gohighlevel">migration Kajabi</Link> détaille cet
+        ordre, et le guide <Link href="/guide/espace-membres-gohighlevel">espace membres</Link> dit ce que le portail
+        GoHighLevel ne remplace pas.
+      </p>
+      <p>
+        Systeme.io : l’export de la liste est la partie facile. Relancer les inactifs depuis un domaine neuf, pour
+        « annoncer la migration », abîme l’envoi. On segmente d’abord. Le guide{" "}
+        <Link href="/guide/migration-systeme-io-gohighlevel">Systeme.io</Link> décrit le tri, et le guide{" "}
+        <Link href="/guide/delivrabilite-email-gohighlevel">délivrabilité</Link> le warm-up.
+      </p>
+      <p>
+        ActiveCampaign : parfois il faut rester. On bascule quand l’email, l’agenda, les pages et l’espace membres ne se
+        parlent plus, pas pour gratter un abonnement. Le comparatif est dans{" "}
+        <Link href="/guide/gohighlevel-vs-activecampaign">GoHighLevel ou ActiveCampaign</Link>. ClickFunnels est cité sur
+        l’accueil parmi les outils de départ : les pages ne se collent pas non plus. On reprend l’offre, le checkout et
+        les pixels le jour où la nouvelle page est en ligne. Il n’y a pas d’article séparé. L’ordre reste celui de la{" "}
+        <Link href="/methode">méthode</Link>.
+      </p>
+
+      <h2>Ce que vous préparez</h2>
+      <p>
+        La liste des outils, le nombre d’offres, la présence d’un espace membres, et les paiements récurrents déjà en
+        cours. Le formulaire d’<Link href="/audit">audit</Link> demande déjà ces points. Il est gratuit. Il donne un
+        ordre de grandeur d’abonnements, pas le plan numéroté. Ce plan, c’est le forfait écrit de 1 000 € HT. Le setup se
+        chiffre ensuite.
+      </p>
+      <p>
+        Apportez aussi ce que vous pouvez justifier : d’où vient la liste, qui a acheté récemment, qui n’a pas ouvert
+        depuis longtemps. Une liste email n’est pas une liste SMS. Le guide{" "}
+        <Link href="/guide/rgpd-gohighlevel-france">RGPD</Link> est la checklist, pas un avis d’avocat. Si le sujet est
+        moins la bascule que le quotidien d’un coach déjà décidé à rester sur un seul compte, lisez{" "}
+        <Link href="/crm-coachs">CRM pour coachs</Link>. Le cadre du travail à distance est sur{" "}
+        <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>.
+      </p>
+
       {faqs.map(([q, a]) => (
         <details className="qa" key={q}>
           <summary>{q}</summary>
           <p>{a}</p>
         </details>
       ))}
+      <RelatedContent
+        hrefs={[
+          "/guide/migration-kajabi-gohighlevel",
+          "/guide/migration-systeme-io-gohighlevel",
+          "/crm-coachs",
+          "/agence-gohighlevel-nantes",
+        ]}
+      />
       <p>
         <Link className="btn" href="/audit">Décrire la stack actuelle</Link>
       </p>

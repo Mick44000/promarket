@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RelatedContent } from "@/components/RelatedContent";
 
 export const metadata = {
   title: "Méthode de migration GoHighLevel",
@@ -43,12 +44,36 @@ export default function MethodePage() {
         acheteurs, ensuite les ouvreurs. Le détail est dans le guide{" "}
         <Link href="/guide/delivrabilite-email-gohighlevel">délivrabilité</Link>.
       </p>
+      <h2>Ce que le calendrier ne couvre pas</h2>
+      <p>
+        Quatorze jours ne veulent pas dire « tout le catalogue, plus le référencement, plus un agent ». Le SEO, le GEO et
+        l’agent viennent quand le compte sait ranger un lead. Les poser le jour du DNS, sur des pages encore clonées,
+        ne donne rien à citer. C’est la page <Link href="/referencement">SEO et GEO</Link>.
+      </p>
+      <p>
+        Le calendrier ne décide pas non plus à qui tu as le droit d’écrire. Une liste importée n’est pas un consentement
+        SMS. Le guide <Link href="/guide/rgpd-gohighlevel-france">RGPD</Link> se lit pendant l’inventaire, pas après la
+        première plainte. Les prix de la plateforme, en dollars, ne sont pas le prix du setup : ils sont dans le guide{" "}
+        <Link href="/guide/prix-gohighlevel-france">prix</Link>.
+      </p>
       <p>
         Le périmètre facturé est sur la page <Link href="/services">Services</Link>. Pour savoir si ta stack entre dans
         le cas « quatorze jours » ou dans un phasage par produit, le formulaire de l’<Link href="/audit">audit</Link>{" "}
         demande la taille de liste, l’espace membres et l’outil actuel. Le forfait écrit, lui, est à part : 1 000 € HT,
-        décrit sur l’accueil.
+        décrit sur l’accueil. Selon que tu compares encore, que tu vends du coaching, ou que tu veux le cadre nantais,
+        les portes sont <Link href="/migration-gohighlevel">la migration</Link>,{" "}
+        <Link href="/crm-coachs">le CRM pour coachs</Link> et{" "}
+        <Link href="/agence-gohighlevel-nantes">l’agence</Link>.
       </p>
+      <RelatedContent
+        hrefs={[
+          "/migration-gohighlevel",
+          "/guide/migration-kajabi-gohighlevel",
+          "/guide/migration-systeme-io-gohighlevel",
+          "/guide/delivrabilite-email-gohighlevel",
+        ]}
+        label="Pages liées"
+      />
       <p>
         <Link className="btn" href="/audit">Décrire ta stack</Link>
       </p>

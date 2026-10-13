@@ -178,7 +178,9 @@ export default function HomePage() {
           <h2>Vous êtes au bon endroit si…</h2>
           <p className="lede">
             GoHighLevel est puissant, et dense. Je m’adresse aux créateurs qui ont besoin d’un setup solide, pas d’une
-            formation de 40 h.
+            formation de 40 h. Le quotidien d’un coach ou d’un formateur est sur{" "}
+            <Link href="/crm-coachs">CRM pour coachs</Link>. Si vous quittez un autre outil, l’ordre est sur{" "}
+            <Link href="/migration-gohighlevel">Migration</Link>.
           </p>
           <div className="grid-3" style={{ marginTop: 22 }}>
             {personas.map(([title, a, b, text]) => (
@@ -202,7 +204,11 @@ export default function HomePage() {
           <p className="lede">
             Chaque projet commence par un audit. Voici les blocs couverts — tout ou partie, selon votre situation. Le détail
             est sur les pages <Link href="/services">Services</Link> et <Link href="/methode">Méthode</Link>. Les centres
-            laser et instituts ont une <Link href="/instituts">offre à part</Link>.
+            laser et instituts ont une <Link href="/instituts">offre à part</Link>. L’email se règle avec le guide{" "}
+            <Link href="/guide/delivrabilite-email-gohighlevel">délivrabilité</Link>, l’accès aux cours avec le guide{" "}
+            <Link href="/guide/espace-membres-gohighlevel">espace membres</Link>, les pages visibles avec{" "}
+            <Link href="/referencement">SEO et GEO</Link>. Les tarifs publics de la plateforme, en dollars et hors usage,
+            sont dans le guide <Link href="/guide/prix-gohighlevel-france">prix</Link>.
           </p>
           <div className="grid-3" style={{ marginTop: 22 }}>
             {scopes.map(([label, title, text, ticks]) => (
@@ -253,17 +259,31 @@ export default function HomePage() {
 
       <section className="band" id="apropos" style={{ paddingTop: 0 }}>
         <div className="wrap about">
-          <img
-            src="/aymeric.jpg"
-            alt="Aymeric Chantrel, fondateur de ProMarket"
-            title="Aymeric Chantrel, fondateur de ProMarket"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/aymeric-480.webp 480w, /aymeric.webp 800w"
+              sizes="(max-width: 860px) min(420px, 92vw), 200px"
+            />
+            <img
+              src="/aymeric.jpg"
+              srcSet="/aymeric-480.jpg 480w, /aymeric.jpg 800w"
+              sizes="(max-width: 860px) min(420px, 92vw), 200px"
+              width={800}
+              height={781}
+              alt="Aymeric Chantrel, fondateur de ProMarket"
+              title="Aymeric Chantrel, fondateur de ProMarket"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div>
             <p className="kicker">À propos</p>
             <h2>Aymeric Chantrel</h2>
             <p className="lede">
               Partenaire technique, pas coach business. Vous gardez la méthode. Je pose le CRM, les tunnels, l’espace
-              membres, les paiements et les relances — à distance, depuis Nantes.
+              membres, les paiements et les relances — à distance, depuis Nantes. Le cadre est sur la page{" "}
+              <Link href="/agence-gohighlevel-nantes">agence</Link>.
             </p>
           </div>
         </div>

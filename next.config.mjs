@@ -7,6 +7,7 @@ const legacyRedirects = [
   ["/microsoft", "/services"],
   ["/module", "/guide/espace-membres-gohighlevel"],
   ["/siteweb", "/services"],
+  ["/politique-de-confidentialite", "/confidentialite"],
 ].flatMap(([source, destination]) => [
   { source, destination, statusCode: 301 },
   { source: `${source}/`, destination, statusCode: 301 },
