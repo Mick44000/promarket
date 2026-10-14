@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RelatedContent } from "@/components/RelatedContent";
 
 export const metadata = {
   title: "Agence GoHighLevel à Nantes",
@@ -117,12 +118,50 @@ export default function AgencePage() {
         pouvez pas expliquer l’origine : on le dit avant de toucher au domaine.
       </p>
 
+      <h2>Comment se passe un projet à distance</h2>
+      <p>
+        Le premier échange sert à voir si le périmètre est le nôtre. On ne demande pas les accès avant ça. Ensuite, soit
+        le formulaire d’<Link href="/audit">audit de stack</Link> suffit pour comparer vos abonnements actuels, soit il
+        faut le livrable écrit : 1 000 € HT, un plan, un macro-planning, décrit sur l’accueil. Le setup se chiffre après,
+        sur devis, selon ce que l’inventaire a montré. Le suivi, si vous le voulez, est à 300 € par mois à partir de 3
+        heures.
+      </p>
+      <p>
+        Aucun de ces montants n’est la licence HighLevel. La plateforme reste facturée en dollars, par HighLevel, selon
+        le plan. Les montants publics relevés en octobre 2026 sont dans le guide{" "}
+        <Link href="/guide/prix-gohighlevel-france">prix</Link>. On ne les convertit pas en euros « pour faire simple » :
+        votre facture client et la facture plateforme sont deux documents.
+      </p>
+      <p>
+        Les textes, les emails et les workflows sont en français. L’interface du logiciel reste surtout en anglais. On ne
+        présente pas un bouton renommé comme une version française de l’éditeur. Le guide{" "}
+        <Link href="/guide/gohighlevel-france">GoHighLevel en France</Link> tient cette distinction.
+      </p>
+
+      <h2>Ce qui reste à votre nom</h2>
+      <p>
+        L’offre, les élèves, les conditions que vous leur envoyez, la facture en euros. Si vous encaissez des sous-comptes
+        sous votre marque, c’est votre société qui facture. HighLevel vous facture la plateforme. Le guide{" "}
+        <Link href="/guide/saas-mode-gohighlevel-france">SaaS mode</Link> sépare les deux flux, et dit ce qu’il ne faut
+        pas promettre : vous n’êtes pas l’éditeur du logiciel.
+      </p>
+      <p>
+        Le quotidien d’un coach ou d’un formateur — pipeline, rendez-vous, relance, accès au cours — est sur{" "}
+        <Link href="/crm-coachs">CRM pour coachs</Link>. La bascule depuis un autre outil est sur{" "}
+        <Link href="/migration-gohighlevel">Migration</Link>. Le référencement des pages, une fois le compte lisible, est
+        sur <Link href="/referencement">SEO et GEO</Link>. Les instituts et centres laser ne sont pas dans ces pages :
+        leurs forfaits sont sur <Link href="/instituts">Instituts</Link>.
+      </p>
+
       {faqs.map(([q, a]) => (
         <details className="qa" key={q}>
           <summary>{q}</summary>
           <p>{a}</p>
         </details>
       ))}
+      <RelatedContent
+        hrefs={["/crm-coachs", "/migration-gohighlevel", "/services", "/guide/gohighlevel-france"]}
+      />
       <p>
         <Link className="btn" href="/audit">Décrire votre stack</Link>
       </p>

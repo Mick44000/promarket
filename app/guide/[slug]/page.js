@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { RelatedContent } from "@/components/RelatedContent";
 import { RichText } from "@/components/RichText";
 import { guides, getGuide } from "@/lib/guides";
 
@@ -92,6 +93,7 @@ export default function GuidePage({ params }) {
         <Link href="/audit">Audit de stack</Link>. Le cadre francophone est résumé dans{" "}
         <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>.
       </p>
+      {guide.bridges?.length ? <RelatedContent hrefs={guide.bridges} label="Pages liées" /> : null}
       <p><Link className="btn" href="/audit">Faire l’audit de ta stack</Link></p>
       {related.length ? (
         <nav aria-label="Articles liés">

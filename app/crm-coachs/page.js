@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RelatedContent } from "@/components/RelatedContent";
 
 export const metadata = {
   title: "CRM GoHighLevel pour coachs et formateurs",
@@ -127,12 +128,59 @@ export default function CrmCoachsPage() {
         <Link href="/guide">guide</Link>.
       </p>
 
+      <h2>Trois workflows, pas une bibliothèque</h2>
+      <p>
+        Un compte de coach n’a pas besoin de quarante scénarios le jour de la livraison. Trois tiennent le quotidien, et
+        seulement une fois le domaine d’envoi authentifié. Les écrire avant le DNS, c’est envoyer depuis une adresse que
+        les boîtes ne connaissent pas.
+      </p>
+      <p>
+        L’accueil : la personne vient de laisser son email ou de réserver. Elle reçoit un message en français, à votre
+        nom, qui dit ce qui se passe ensuite. Pas une séquence de douze mails traduite d’un marché américain. Le rappel
+        de rendez-vous, et la suite si la personne ne vient pas, partent du même contact. Vous ne recopiez pas l’agenda
+        dans un tableur le lundi.
+      </p>
+      <p>
+        L’accès, si vous vendez une formation : le paiement ouvre le module, l’échec de paiement le referme. Le guide{" "}
+        <Link href="/guide/espace-membres-gohighlevel">espace membres</Link> dit jusqu’où ce portail va. S’il ne va pas
+        assez loin pour votre promesse, on le dit avant de migrer. Le comparatif avec un outil d’email seul est dans{" "}
+        <Link href="/guide/gohighlevel-vs-activecampaign">GoHighLevel ou ActiveCampaign</Link>.
+      </p>
+
+      <h2>Ce que vous apportez</h2>
+      <p>
+        Vous apportez l’offre, le prix, les étapes réelles de la vente, et la liste des gens à qui vous avez le droit
+        d’écrire. Le compte range ça. Il ne choisit pas votre positionnement. Il n’invente pas un consentement, et il
+        n’écrit pas les séances à votre place.
+      </p>
+      <p>
+        Si la liste vient de Kajabi, de Systeme.io, de ClickFunnels ou d’un fichier dont vous ne savez plus l’origine, on
+        la trie avant le premier envoi. Les acheteurs récents d’abord. Les inactifs ne servent pas à « annoncer le nouvel
+        outil ». La page <Link href="/migration-gohighlevel">Migration</Link> donne cet ordre, quel que soit l’outil de
+        départ. Le guide <Link href="/guide/gohighlevel-france">GoHighLevel en France</Link> rappelle ce que les tutos
+        américains ne couvrent pas : la facture en euros, les SMS, le responsable de traitement.
+      </p>
+      <p>
+        Le formulaire d’<Link href="/audit">audit</Link> demande les outils et l’objectif. Il est gratuit. Il ne remplace
+        pas le forfait écrit de 1 000 € HT quand il faut un plan numéroté. Le setup se chiffre après. Le suivi mensuel,
+        si vous le choisissez, est à 300 € à partir de 3 heures, décrit sur l’accueil. Aucun de ces montants n’est
+        l’abonnement HighLevel.
+      </p>
+
       {faqs.map(([q, a]) => (
         <details className="qa" key={q}>
           <summary>{q}</summary>
           <p>{a}</p>
         </details>
       ))}
+      <RelatedContent
+        hrefs={[
+          "/migration-gohighlevel",
+          "/agence-gohighlevel-nantes",
+          "/guide/espace-membres-gohighlevel",
+          "/guide/gohighlevel-france",
+        ]}
+      />
       <p>
         <Link className="btn" href="/audit">Voir si le compte a un sens</Link>
       </p>

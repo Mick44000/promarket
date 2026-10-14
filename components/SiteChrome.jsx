@@ -10,7 +10,7 @@ export function Header() {
     <div className="wrap">
       <nav className={open ? "nav open" : "nav"}>
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
-          <img className="mark" src="/favicon.svg" alt="ProMarket" title="ProMarket" />
+          <img className="mark" src="/favicon.svg" alt="ProMarket" title="ProMarket" width={32} height={32} />
           ProMarket
         </Link>
         <button type="button" className="nav-toggle" aria-expanded={open} aria-label="Menu" onClick={() => setOpen((v) => !v)}>

@@ -19,6 +19,8 @@
     { "source": "/module", "destination": "/guide/espace-membres-gohighlevel", "statusCode": 301 },
     { "source": "/module/", "destination": "/guide/espace-membres-gohighlevel", "statusCode": 301 },
     { "source": "/siteweb", "destination": "/services", "statusCode": 301 },
-    { "source": "/siteweb/", "destination": "/services", "statusCode": 301 }
+    { "source": "/siteweb/", "destination": "/services", "statusCode": 301 },
+    { "source": "/politique-de-confidentialite", "destination": "/confidentialite", "statusCode": 301 },
+    { "source": "/politique-de-confidentialite/", "destination": "/confidentialite", "statusCode": 301 }
   ]
 }
