@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { guides } from "@/lib/guides";
 import { site } from "@/lib/site";
 
@@ -35,7 +34,7 @@ export function Footer() {
           <ul>
             {offer.map(([href, label]) => (
               <li key={href}>
-                <Link href={href}>{label}</Link>
+                <a href={href}>{label}</a>
               </li>
             ))}
           </ul>
@@ -44,11 +43,11 @@ export function Footer() {
           <p className="kicker">Guide</p>
           <ul>
             <li>
-              <Link href="/guide">Tous les articles</Link>
+              <a href="/guide">Tous les articles</a>
             </li>
             {guides.map((guide) => (
               <li key={guide.slug}>
-                <Link href={`/guide/${guide.slug}`}>{guide.nav}</Link>
+                <a href={`/guide/${guide.slug}`}>{guide.nav}</a>
               </li>
             ))}
           </ul>
@@ -58,7 +57,7 @@ export function Footer() {
           <ul>
             {legal.map(([href, label]) => (
               <li key={href}>
-                <Link href={href}>{label}</Link>
+                <a href={href}>{label}</a>
               </li>
             ))}
           </ul>
