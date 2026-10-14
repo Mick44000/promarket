@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export const metadata = {
   title: { absolute: "GoHighLevel France : expert setup, migration, SEO et agents IA | ProMarket" },
@@ -60,7 +59,7 @@ export default function HomePage() {
       <section className="wrap hero">
         <div>
           <p className="crumb">
-            <Link href="/">Accueil</Link>
+            <a href="/">Accueil</a>
             {" › "}
             GoHighLevel
           </p>
@@ -80,9 +79,9 @@ export default function HomePage() {
             GoHighLevel pour que vous soyez opérationnel rapidement.
           </p>
           <div className="hero-actions">
-            <Link className="btn" href="/audit">
+            <a className="btn" href="/audit">
               Démarrer avec un audit →
-            </Link>
+            </a>
             <a className="btn ghost" href="#perimetre">
               Voir ce qui est inclus
             </a>
@@ -179,8 +178,8 @@ export default function HomePage() {
           <p className="lede">
             GoHighLevel est puissant, et dense. Je m’adresse aux créateurs qui ont besoin d’un setup solide, pas d’une
             formation de 40 h. Le quotidien d’un coach ou d’un formateur est sur{" "}
-            <Link href="/crm-coachs">CRM pour coachs</Link>. Si vous quittez un autre outil, l’ordre est sur{" "}
-            <Link href="/migration-gohighlevel">Migration</Link>.
+            <a href="/crm-coachs">CRM pour coachs</a>. Si vous quittez un autre outil, l’ordre est sur{" "}
+            <a href="/migration-gohighlevel">Migration</a>.
           </p>
           <div className="grid-3" style={{ marginTop: 22 }}>
             {personas.map(([title, a, b, text]) => (
@@ -203,12 +202,12 @@ export default function HomePage() {
           <h2>Ce que je configure pour vous</h2>
           <p className="lede">
             Chaque projet commence par un audit. Voici les blocs couverts — tout ou partie, selon votre situation. Le détail
-            est sur les pages <Link href="/services">Services</Link> et <Link href="/methode">Méthode</Link>. Les centres
-            laser et instituts ont une <Link href="/instituts">offre à part</Link>. L’email se règle avec le guide{" "}
-            <Link href="/guide/delivrabilite-email-gohighlevel">délivrabilité</Link>, l’accès aux cours avec le guide{" "}
-            <Link href="/guide/espace-membres-gohighlevel">espace membres</Link>, les pages visibles avec{" "}
-            <Link href="/referencement">SEO et GEO</Link>. Les tarifs publics de la plateforme, en dollars et hors usage,
-            sont dans le guide <Link href="/guide/prix-gohighlevel-france">prix</Link>.
+            est sur les pages <a href="/services">Services</a> et <a href="/methode">Méthode</a>. Les centres
+            laser et instituts ont une <a href="/instituts">offre à part</a>. L’email se règle avec le guide{" "}
+            <a href="/guide/delivrabilite-email-gohighlevel">délivrabilité</a>, l’accès aux cours avec le guide{" "}
+            <a href="/guide/espace-membres-gohighlevel">espace membres</a>, les pages visibles avec{" "}
+            <a href="/referencement">SEO et GEO</a>. Les tarifs publics de la plateforme, en dollars et hors usage,
+            sont dans le guide <a href="/guide/prix-gohighlevel-france">prix</a>.
           </p>
           <div className="grid-3" style={{ marginTop: 22 }}>
             {scopes.map(([label, title, text, ticks]) => (
@@ -250,9 +249,9 @@ export default function HomePage() {
             ))}
           </div>
           <div className="hero-actions">
-            <Link className="btn" href="/audit">
+            <a className="btn" href="/audit">
               Commander l’audit →
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -283,7 +282,7 @@ export default function HomePage() {
             <p className="lede">
               Partenaire technique, pas coach business. Vous gardez la méthode. Je pose le CRM, les tunnels, l’espace
               membres, les paiements et les relances — à distance, depuis Nantes. Le cadre est sur la page{" "}
-              <Link href="/agence-gohighlevel-nantes">agence</Link>.
+              <a href="/agence-gohighlevel-nantes">agence</a>.
             </p>
           </div>
         </div>
@@ -341,27 +340,27 @@ export default function HomePage() {
             réponses des IA pour le GEO, un agent qui qualifie dans le CRM.
           </p>
           <p className="lede">
-            Trois portes d’entrée : <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>,{" "}
-            <Link href="/migration-gohighlevel">la migration vers GoHighLevel</Link> et{" "}
-            <Link href="/crm-coachs">le CRM pour coachs et formateurs</Link>. Le sommaire des articles est sur le{" "}
-            <Link href="/guide">guide</Link>.
+            Trois portes d’entrée : <a href="/agence-gohighlevel-nantes">l’agence à Nantes</a>,{" "}
+            <a href="/migration-gohighlevel">la migration vers GoHighLevel</a> et{" "}
+            <a href="/crm-coachs">le CRM pour coachs et formateurs</a>. Le sommaire des articles est sur le{" "}
+            <a href="/guide">guide</a>.
           </p>
           <div className="grid-3" style={{ marginTop: 22 }}>
-            <Link href="/guide/gohighlevel-france" className="card" style={{ textDecoration: "none" }}>
+            <a href="/guide/gohighlevel-france" className="card" style={{ textDecoration: "none" }}>
               <p className="scope-label">Guide</p>
               <h3 style={{ marginTop: 8 }}>GoHighLevel en France</h3>
               <p className="muted">Prix en dollars, facture en euros, TVA, SMS, RGPD, SaaS mode.</p>
-            </Link>
-            <Link href="/referencement" className="card" style={{ textDecoration: "none" }}>
+            </a>
+            <a href="/referencement" className="card" style={{ textDecoration: "none" }}>
               <p className="scope-label">Offre</p>
               <h3 style={{ marginTop: 8 }}>SEO et GEO</h3>
               <p className="muted">Des pages que Google indexe et que les IA peuvent citer.</p>
-            </Link>
-            <Link href="/guide/seo-geo-agent-ia-gohighlevel" className="card" style={{ textDecoration: "none" }}>
+            </a>
+            <a href="/guide/seo-geo-agent-ia-gohighlevel" className="card" style={{ textDecoration: "none" }}>
               <p className="scope-label">Agent</p>
               <h3 style={{ marginTop: 8 }}>Agent IA dans GHL</h3>
               <p className="muted">Qualification, rendez-vous, passage à un humain. Branché au pipeline.</p>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -395,9 +394,9 @@ export default function HomePage() {
             <a className="btn" href="mailto:contact@promarket.fr?subject=Appel%20ProMarket">
               Réserver un appel gratuit
             </a>
-            <Link className="btn ghost" href="/audit">
+            <a className="btn ghost" href="/audit">
               Commander l’audit
-            </Link>
+            </a>
           </div>
         </div>
       </section>

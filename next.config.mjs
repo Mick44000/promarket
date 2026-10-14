@@ -16,6 +16,10 @@ const legacyRedirects = [
 const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  experimental: {
+    // CSS in the HTML so the hero text does not wait on a stylesheet round trip.
+    inlineCss: true,
+  },
   async redirects() {
     return [
       {

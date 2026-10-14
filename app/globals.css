@@ -11,9 +11,9 @@
   --forest-2: #09080d;
   --cream: #12111a;
   --shadow: 0 28px 70px rgba(0, 0, 0, 0.4);
-  --serif: "Fraunces", "Times New Roman", serif;
-  --sans: "Sora", "Avenir Next", sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: ui-sans-serif, system-ui, sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
 * { box-sizing: border-box; }
@@ -30,7 +30,6 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: auto, 72px 72px, 72px 72px;
-  background-attachment: fixed;
 }
 a { color: inherit; }
 img { max-width: 100%; display: block; }
@@ -43,8 +42,7 @@ button, input, select, textarea { font-family: inherit; }
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; justify-content: space-between;
   padding: 16px 0;
-  background: rgba(9, 8, 13, 0.82);
-  backdrop-filter: blur(10px);
+  background: rgba(9, 8, 13, 0.96);
   border-bottom: 1px solid transparent;
 }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; letter-spacing: -0.03em; }
@@ -95,7 +93,7 @@ h3 { font-size: 26px; margin: 0 0 8px; }
 .stat b { display: block; font-family: var(--serif); font-size: 22px; color: var(--signal-soft); }
 .stat span { font-size: 12px; color: var(--ink-soft); }
 
-.band { padding: 72px 0; }
+.band { padding: 72px 0; content-visibility: auto; contain-intrinsic-size: auto 720px; }
 .band.dark { background: rgba(255, 255, 255, 0.025); color: var(--ink); }
 .band.dark .muted, .band.ink .muted { color: #c9bfd8; }
 .band.dark .kicker, .band.ink .kicker, .band.dark .tag, .band.ink .tag { color: var(--signal-soft); }
