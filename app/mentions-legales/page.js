@@ -1,6 +1,9 @@
 import { site } from "@/lib/site";
 
-export const metadata = { title: "Mentions légales", robots: { index: false } };
+export const metadata = {
+  title: "Mentions légales",
+  robots: { index: false, follow: true },
+};
 
 export default function Mentions() {
   return (
@@ -37,6 +40,12 @@ export default function Mentions() {
       <p>
         Le site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis —{" "}
         <a href="https://vercel.com">vercel.com</a>.
+      </p>
+
+      <h2>Assurance professionnelle</h2>
+      <p>
+        Promarket est assuré par l’intermédiaire de{" "}
+        <a href="https://moncourtierassure.fr/">Mon Courtier Assure, courtier en assurance</a>.
       </p>
 
       <h2>Marques et indépendance</h2>
