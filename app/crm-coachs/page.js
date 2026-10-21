@@ -2,11 +2,18 @@ import Link from "next/link";
 import { RelatedContent } from "@/components/RelatedContent";
 
 export const metadata = {
-  title: "CRM GoHighLevel pour coachs et formateurs",
+  title: "CRM pour coach et formateur",
   description:
-    "Pipeline, rendez-vous, relances, espace membres et paiement dans le même compte GoHighLevel. Pour les coachs, formateurs et petits business en ligne.",
+    "CRM pour coach et CRM formateur : un logiciel tout-en-un. Pipeline, rendez-vous, automatisation marketing et accès au cours dans GoHighLevel.",
   alternates: { canonical: "/crm-coachs" },
-  keywords: ["CRM pour coach", "CRM GoHighLevel", "GoHighLevel formateur", "CRM tout-en-un"],
+  keywords: [
+    "crm coach",
+    "crm pour coach",
+    "crm formateur",
+    "crm tout en un",
+    "logiciel tout en un coach",
+    "automatisation marketing coach",
+  ],
 };
 
 const faqs = [
@@ -20,7 +27,19 @@ const faqs = [
   ],
   [
     "Et si je ne suis pas coach, mais une petite entreprise ?",
-    "Le même socle sert dès que vous avez des prospects, des rendez-vous et un suivi. Les instituts et centres laser ont une offre séparée, avec ses propres forfaits. Le reste se regarde au cas par cas, à partir de l’audit, sans catalogue de métiers inventé.",
+    "Le même socle sert dès que vous avez des prospects, des rendez-vous et un suivi. Les instituts et centres laser ont une offre séparée, avec leurs propres forfaits. Le reste se regarde au cas par cas, à partir de l’audit, sans catalogue de métiers inventé.",
+  ],
+  [
+    "C’est quoi un CRM pour coach, concrètement ?",
+    "Un pipeline qui reprend vos étapes, un rendez-vous dans le même contact, une relance quand l’étape change, et, si vous vendez une formation, un accès ouvert ou fermé selon le paiement. Pas une base que vous « gérez » à part.",
+  ],
+  [
+    "Un CRM formateur est-il un autre logiciel ?",
+    "Non. Le formateur ajoute une question : la personne a-t-elle encore le droit d’ouvrir le module ? L’espace membres répond dans le même compte. S’il ne suffit pas, on le dit avant de quitter Kajabi.",
+  ],
+  [
+    "L’automatisation marketing d’un coach, par où ça commence ?",
+    "Par trois workflows, une fois le domaine authentifié : l’accueil, le rendez-vous, l’accès au cours. Pas par une bibliothèque de quarante scénarios traduits d’un marché américain.",
   ],
 ];
 
@@ -45,11 +64,12 @@ export default function CrmCoachsPage() {
         CRM pour coachs
       </p>
       <p className="kicker">Coachs · formateurs</p>
-      <h1>Un CRM tout-en-un pour les coachs et les formateurs.</h1>
+      <h1>CRM pour coach : un logiciel tout-en-un, formateurs compris.</h1>
+      <p className="meta"><span>Mis à jour le 20 octobre 2026</span></p>
       <p className="lede">
-        Un prospect, un rendez-vous, une relance, un accès au cours, un paiement. Quand ces gestes sont dans cinq
-        logiciels, le suivi dépend de votre mémoire. GoHighLevel les réunit. Encore faut-il que le compte ressemble à
-        votre façon de vendre.
+        Un CRM pour coach range le prospect, le rendez-vous, la relance et le paiement au même endroit. Un CRM formateur
+        y ajoute l’accès au cours. Quand ces gestes sont dans cinq logiciels, le suivi dépend de votre mémoire.
+        GoHighLevel peut les réunir. Encore faut-il que le compte ressemble à votre façon de vendre.
       </p>
 
       <h2>Le quotidien que le compte doit refléter</h2>
@@ -145,6 +165,68 @@ export default function CrmCoachsPage() {
         <Link href="/guide/espace-membres-gohighlevel">espace membres</Link> dit jusqu’où ce portail va. S’il ne va pas
         assez loin pour votre promesse, on le dit avant de migrer. Le comparatif avec un outil d’email seul est dans{" "}
         <Link href="/guide/gohighlevel-vs-activecampaign">GoHighLevel ou ActiveCampaign</Link>.
+      </p>
+      <p>
+        L’automatisation marketing d’un coach s’arrête là au début. Trois scénarios tiennent le quotidien. Le quatrième,
+        une relance SMS, ne s’ajoute que si le numéro a été collecté pour ça, et si vous avez regardé le coût à l’usage.
+        Le guide <Link href="/guide/prix-gohighlevel-france">prix</Link> sépare l’abonnement et le portefeuille. Le guide{" "}
+        <Link href="/guide/rgpd-gohighlevel-france">RGPD</Link> sépare la liste email et la liste SMS.
+      </p>
+      <div className="table-scroll">
+        <table>
+          <caption>Ce que le logiciel tout-en-un remplace, et ce qu’il ne décide pas à votre place.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Geste</th>
+              <th scope="col">Souvent éparpillé</th>
+              <th scope="col">Dans le compte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Savoir où en est le prospect</td>
+              <td>Mémoire, tableur, tags trop larges</td>
+              <td>Une étape de pipeline = un geste réel</td>
+            </tr>
+            <tr>
+              <td>Prendre et rappeler un rendez-vous</td>
+              <td>Agenda d’un côté, CRM de l’autre</td>
+              <td>Le créneau vit sur le contact</td>
+            </tr>
+            <tr>
+              <td>Relancer</td>
+              <td>Séquence générique, tous les matins</td>
+              <td>Un message quand l’étape change</td>
+            </tr>
+            <tr>
+              <td>Ouvrir le cours</td>
+              <td>LMS plus un connecteur</td>
+              <td>Paiement, tag, accès. Voir l’espace membres</td>
+            </tr>
+            <tr>
+              <td>Écrire l’offre</td>
+              <td>Personne</td>
+              <td>Toujours vous. L’outil range, il ne positionne pas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Avant de parler d’automatisation, la liste tient sur une page :</p>
+      <ul className="checks">
+        <li>Les étapes réelles de la vente sont nommées, pas copiées d’un modèle à cinq colonnes.</li>
+        <li>Les champs portent l’offre, la date de session, l’accompagnement en cours. Les tags ne les doublonnent pas.</li>
+        <li>Le domaine d’envoi est authentifié avant la séquence d’accueil. Le guide délivrabilité dit l’ordre.</li>
+        <li>Vous savez à qui vous avez le droit d’écrire, et par quel canal.</li>
+        <li>S’il y a une formation, un élève de test a ouvert un module avant tout mail à la liste.</li>
+        <li>Le plan HighLevel est choisi pour un seul business, sauf si vous rebillez des sous-comptes.</li>
+      </ul>
+      <p>
+        Le piège habituel est d’allumer les quarante scénarios du snapshot le jour de la livraison. Vous ne savez plus
+        lequel a écrit, et le prospect reçoit trois versions du même accueil. On garde les trois workflows. On éteint le
+        reste. Le <Link href="/guide">guide</Link> détaille chaque sujet à part :{" "}
+        <Link href="/guide/gohighlevel-france">le cadre français</Link>,{" "}
+        <Link href="/guide/delivrabilite-email-gohighlevel">la délivrabilité</Link>,{" "}
+        <Link href="/guide/migration-systeme-io-gohighlevel">Systeme.io</Link> si les tunnels viennent de là.
       </p>
 
       <h2>Ce que vous apportez</h2>

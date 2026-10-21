@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RelatedContent } from "@/components/RelatedContent";
 import { RichText } from "@/components/RichText";
-import { guides, getGuide } from "@/lib/guides";
+import { formatLongDate, getGuide, guideReading, guides } from "@/lib/guides";
 
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -20,16 +20,74 @@ export function generateMetadata({ params }) {
   };
 }
 
+function GuideBlocks({ section }) {
+  return (
+    <>
+      {(section.p || []).map((para) => (
+        <p key={para.slice(0, 80)}>
+          <RichText text={para} />
+        </p>
+      ))}
+      {section.table ? (
+        <div className="table-scroll">
+          <table>
+            {section.table.caption ? <caption>{section.table.caption}</caption> : null}
+            <thead>
+              <tr>
+                {section.table.head.map((cell, index) => (
+                  <th key={`${cell}-${index}`} scope="col">{cell}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {section.table.rows.map((row) => (
+                <tr key={row[0]}>
+                  {row.map((cell, index) => (
+                    <td key={`${index}-${cell.slice(0, 24)}`}><RichText text={cell} /></td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : null}
+      {section.steps?.length ? (
+        <ol className="howto">
+          {section.steps.map((step) => (
+            <li key={step.slice(0, 80)}><RichText text={step} /></li>
+          ))}
+        </ol>
+      ) : null}
+      {section.bullets?.length ? (
+        <ul className="plain">
+          {section.bullets.map((item) => (
+            <li key={item.slice(0, 80)}><RichText text={item} /></li>
+          ))}
+        </ul>
+      ) : null}
+      {section.checks?.length ? (
+        <ul className="checks">
+          {section.checks.map((item) => (
+            <li key={item.slice(0, 80)}><RichText text={item} /></li>
+          ))}
+        </ul>
+      ) : null}
+    </>
+  );
+}
+
 export default function GuidePage({ params }) {
   const guide = getGuide(params.slug);
   if (!guide) notFound();
+  const updated = guide.updated || guide.date;
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Article",
-        headline: guide.title,
+        headline: guide.h1 || guide.title,
         datePublished: guide.date,
+        dateModified: updated,
         inLanguage: "fr-FR",
         description: guide.description,
         keywords: guide.keywords?.join(", "),
@@ -63,17 +121,16 @@ export default function GuidePage({ params }) {
         {guide.nav}
       </p>
       <p className="kicker">{guide.category}</p>
-      <h1>{guide.title}</h1>
-      <p className="meta"><span>{guide.date}</span><span>{guide.reading}</span></p>
+      <h1>{guide.h1 || guide.title}</h1>
+      <p className="meta">
+        <span>{`Mis à jour le ${formatLongDate(updated)}`}</span>
+        <span>{guideReading(guide)}</span>
+      </p>
       <p className="lede">{guide.lead}</p>
       {guide.sections.map((s) => (
         <section key={s.h}>
           <h2>{s.h}</h2>
-          {s.p.map((para) => (
-            <p key={para.slice(0, 40)}>
-              <RichText text={para} />
-            </p>
-          ))}
+          <GuideBlocks section={s} />
         </section>
       ))}
       {guide.faq?.length ? (
@@ -87,7 +144,19 @@ export default function GuidePage({ params }) {
           ))}
         </section>
       ) : null}
-      <p className="note">ProMarket est indépendant de HighLevel, LLC. Les prix plateforme cités sont les tarifs publics en dollars, hors usage, relevés en octobre 2026. Les textes décrivent une méthode d’installation. Ils ne sont pas un conseil juridique ou fiscal.</p>
+      <p className="note">ProMarket est indépendant de HighLevel, LLC. Les prix plateforme cités sont les tarifs publics en dollars, hors taxes américaines et hors usage, relevés le 20 octobre 2026. Les textes décrivent une méthode d’installation. Ils ne sont pas un conseil juridique ou fiscal.</p>
+      {guide.sources?.length ? (
+        <p className="note">
+          Sources publiques :{" "}
+          {guide.sources.map((source, index) => (
+            <span key={source.href}>
+              {index ? " · " : ""}
+              <a href={source.href}>{source.label}</a>
+            </span>
+          ))}
+          .
+        </p>
+      ) : null}
       <p>
         La mise en œuvre est sur les pages <Link href="/services">Services</Link>, <Link href="/methode">Méthode</Link> et{" "}
         <Link href="/audit">Audit de stack</Link>. Le cadre francophone est résumé dans{" "}

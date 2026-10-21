@@ -211,6 +211,20 @@ input, select, textarea {
 .amount { font-family: var(--serif); font-size: 40px; line-height: 1; margin: 8px 0; }
 .price .btn { margin-top: auto; align-self: flex-start; }
 
+.table-scroll { overflow-x: auto; margin: 4px 0 18px; }
+.article table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 520px; }
+.article caption { caption-side: bottom; text-align: left; padding-top: 8px; font-size: 13px; color: var(--ink-soft); }
+.article th, .article td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+.article th { font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+.article ol.howto, .article ul.plain { margin: 0 0 16px; padding-left: 1.25em; }
+.article ol.howto li, .article ul.plain li, .article ul.checks li { margin: 8px 0; }
+.article ul.checks { list-style: none; margin: 0 0 16px; padding: 0; }
+.article ul.checks li { position: relative; padding-left: 22px; }
+.article ul.checks li::before {
+  content: ""; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px;
+  border-radius: 2px; border: 1.5px solid var(--signal-soft);
+}
+
 details.qa { border-top: 1px solid var(--line); padding: 16px 0; }
 details.qa summary { cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; gap: 16px; list-style: none; }
 details.qa summary::-webkit-details-marker { display: none; }
