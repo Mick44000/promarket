@@ -2,11 +2,11 @@ import Link from "next/link";
 import { RelatedContent } from "@/components/RelatedContent";
 
 export const metadata = {
-  title: "Migration vers GoHighLevel",
+  title: "Migration GoHighLevel",
   description:
-    "Contacts, élèves, emails et paiements : l’ordre pour migrer vers GoHighLevel depuis Kajabi, Systeme.io, ActiveCampaign ou ClickFunnels, sans couper les accès.",
+    "Migration GoHighLevel depuis Kajabi, Systeme.io, ActiveCampaign ou ClickFunnels. Contacts, élèves, emails et paiements : le test avant le domaine.",
   alternates: { canonical: "/migration-gohighlevel" },
-  keywords: ["migration GoHighLevel", "migrer vers GoHighLevel", "alternative Kajabi", "alternative Systeme.io"],
+  keywords: ["migration gohighlevel", "migration GoHighLevel", "migrer vers GoHighLevel", "alternative Kajabi", "alternative Systeme.io"],
 };
 
 const faqs = [
@@ -21,6 +21,14 @@ const faqs = [
   [
     "Puis-je garder l’ancien outil en parallèle ?",
     "Quelques semaines, pour comparer et basculer produit par produit. Pas comme architecture finale. Deux outils de capture, ce sont deux sources de vérité, et des leads qui n’arrivent nulle part.",
+  ],
+  [
+    "Par quoi commence une migration GoHighLevel ?",
+    "Par l’inventaire : offres, tags, domaines, DNS email, paiements en cours, liste chaude et liste froide. L’import des contacts vient après cette carte, pas avant.",
+  ],
+  [
+    "Kajabi, Systeme.io et ActiveCampaign se migrent-ils de la même façon ?",
+    "L’ordre est le même : inventaire, reconstruction, test, bascule. Le guide change. Kajabi se joue sur les accès élèves. Systeme.io se joue sur la liste. ActiveCampaign se joue sur les scénarios encore utiles, et parfois il faut rester.",
   ],
 ];
 
@@ -45,10 +53,11 @@ export default function MigrationPage() {
         Migration
       </p>
       <p className="kicker">Migration</p>
-      <h1>Migrer vers GoHighLevel sans couper les accès.</h1>
+      <h1>Migration GoHighLevel : l’ordre, sans couper les accès.</h1>
+      <p className="meta"><span>Mis à jour le 20 octobre 2026</span></p>
       <p className="lede">
-        L’import de contacts est la partie visible. Le travail est ailleurs : savoir qui a payé, qui a encore un module
-        ouvert, et quel domaine a le droit d’envoyer le mail du jour J.
+        Une migration GoHighLevel ne commence pas par l’import. Elle commence par savoir qui a payé, qui a encore un
+        module ouvert, et quel domaine a le droit d’envoyer le mail du jour J.
       </p>
 
       <h2>D’où l’on part</h2>
@@ -90,6 +99,50 @@ export default function MigrationPage() {
         <Link href="/guide/migration-systeme-io-gohighlevel">Systeme.io</Link>,{" "}
         <Link href="/guide/delivrabilite-email-gohighlevel">délivrabilité</Link>.
       </p>
+      <div className="table-scroll">
+        <table>
+          <caption>Même ordre, risque différent selon l’outil de départ.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Départ</th>
+              <th scope="col">Ce qui casse en premier</th>
+              <th scope="col">Où c’est détaillé</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kajabi</td>
+              <td>L’élève qui n’ouvre plus le module, ou qui est débité deux fois</td>
+              <td><Link href="/guide/migration-kajabi-gohighlevel">Migration Kajabi</Link></td>
+            </tr>
+            <tr>
+              <td>Systeme.io</td>
+              <td>La liste froide relancée depuis un domaine neuf</td>
+              <td><Link href="/guide/migration-systeme-io-gohighlevel">Migration Systeme.io</Link></td>
+            </tr>
+            <tr>
+              <td>ActiveCampaign</td>
+              <td>Des scénarios réécrits pour rien, ou coupés trop tôt</td>
+              <td><Link href="/guide/gohighlevel-vs-activecampaign">GoHighLevel vs ActiveCampaign</Link></td>
+            </tr>
+            <tr>
+              <td>ClickFunnels</td>
+              <td>Un tunnel cloné, un upsell encore branché sur l’ancien paiement</td>
+              <td>Même ordre que la méthode. Pas d’article séparé</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Le jour J ne se pose pas tant que cette liste n’est pas cochée :</p>
+      <ul className="checks">
+        <li>Une ligne par offre : prix, type de paiement, élèves actifs, domaine.</li>
+        <li>Les abonnements déjà en cours sont identifiés. On ne les recrée pas à la main.</li>
+        <li>Un compte test a ouvert un module, reçu le message d’accès, et s’est reconnecté.</li>
+        <li>SPF, DKIM et DMARC sont en place sur le domaine qui envoie.</li>
+        <li>Les premiers messages partent vers les acheteurs récents, pas vers toute la base.</li>
+        <li>L’ancien outil reste lisible. Les anciens liens ont encore une porte.</li>
+        <li>Le droit d’écrire est documenté avant le premier workflow. Le guide RGPD est la checklist, pas un avis juridique.</li>
+      </ul>
 
       <h2>Ce qu’on ne transfère pas par magie</h2>
       <p>
@@ -148,18 +201,16 @@ export default function MigrationPage() {
 
       <h2>Ce que vous préparez</h2>
       <p>
-        La liste des outils, le nombre d’offres, la présence d’un espace membres, et les paiements récurrents déjà en
-        cours. Le formulaire d’<Link href="/audit">audit</Link> demande déjà ces points. Il est gratuit. Il donne un
-        ordre de grandeur d’abonnements, pas le plan numéroté. Ce plan, c’est le forfait écrit de 1 000 € HT. Le setup se
-        chiffre ensuite.
+        Apportez la liste des outils, le nombre d’offres, et ce que vous pouvez justifier : d’où vient la liste, qui a
+        acheté récemment, qui n’a pas ouvert depuis longtemps. Une liste email n’est pas une liste SMS. Le guide{" "}
+        <Link href="/guide/rgpd-gohighlevel-france">RGPD</Link> tient cette distinction. Le cadre du compte, facture et
+        langue comprises, est dans <Link href="/guide/gohighlevel-france">GoHighLevel en France</Link>.
       </p>
       <p>
-        Apportez aussi ce que vous pouvez justifier : d’où vient la liste, qui a acheté récemment, qui n’a pas ouvert
-        depuis longtemps. Une liste email n’est pas une liste SMS. Le guide{" "}
-        <Link href="/guide/rgpd-gohighlevel-france">RGPD</Link> est la checklist, pas un avis d’avocat. Si le sujet est
-        moins la bascule que le quotidien d’un coach déjà décidé à rester sur un seul compte, lisez{" "}
-        <Link href="/crm-coachs">CRM pour coachs</Link>. Le cadre du travail à distance est sur{" "}
-        <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>.
+        Si le sujet est moins la bascule que le quotidien d’un coach déjà décidé à rester sur un seul compte, lisez{" "}
+        <Link href="/crm-coachs">CRM pour coachs</Link>. Le travail à distance se fait depuis Nantes :{" "}
+        <Link href="/agence-gohighlevel-nantes">l’agence</Link>. Les montants de plateforme, en dollars et hors usage,
+        restent dans le guide <Link href="/guide/prix-gohighlevel-france">prix</Link>.
       </p>
 
       {faqs.map(([q, a]) => (
