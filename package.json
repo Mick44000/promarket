@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/defer-next-scripts.mjs",
-    "start": "next start"
+    "start": "next start",
+    "test": "node --test lib/honeylog.test.mjs"
   },
   "dependencies": {
     "next": "^15.2.2",
