@@ -60,6 +60,7 @@ button, input, select, textarea { font-family: inherit; }
   font-weight: 600; font-size: 14px; cursor: pointer;
 }
 .btn:hover { background: var(--signal-deep); }
+.btn:disabled { opacity: 0.6; cursor: wait; }
 .btn.dark { background: #fff; color: #120c22; }
 .btn.dark:hover { background: #efe8ff; }
 .btn.ghost { background: transparent; color: var(--ink); border: 1px solid rgba(255, 255, 255, 0.16); }
@@ -153,6 +154,13 @@ input, select, textarea {
 .report { background: var(--cream); border-radius: 18px; padding: 20px; border: 1px solid var(--line); }
 .check { display: flex; gap: 8px; align-items: center; font-weight: 500; }
 .note { font-size: 13px; color: var(--ink-soft); }
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 @media (max-width: 860px) {
   .hero, .grid-3, .grid-2, .step, .hero-stats, .prices, .pipe, .about, .dash-metrics, .foot { grid-template-columns: 1fr; }
