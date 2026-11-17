@@ -147,12 +147,19 @@ footer.site {
 .article a.btn.ghost { color: var(--ink); }
 
 .form { display: grid; gap: 14px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; }
 input, select, textarea {
   border: 1px solid var(--line); background: #14131c; border-radius: 12px; padding: 12px 14px; font-size: 15px; color: var(--ink);
 }
 .report { background: var(--cream); border-radius: 18px; padding: 20px; border: 1px solid var(--line); }
+.channels {
+  border: 1px solid var(--line); border-radius: 12px; margin: 0; padding: 12px 14px 14px;
+  display: grid; gap: 8px;
+}
+.channels legend { padding: 0 6px; font-size: 14px; font-weight: 600; }
 .check { display: flex; gap: 8px; align-items: center; font-weight: 500; }
+.check input { width: 18px; height: 18px; padding: 0; accent-color: var(--signal); }
 .note { font-size: 13px; color: var(--ink-soft); }
 .hp {
   position: absolute;
@@ -163,7 +170,7 @@ input, select, textarea {
 }
 
 @media (max-width: 860px) {
-  .hero, .grid-3, .grid-2, .step, .hero-stats, .prices, .pipe, .about, .dash-metrics, .foot { grid-template-columns: 1fr; }
+  .hero, .grid-3, .grid-2, .step, .hero-stats, .prices, .pipe, .about, .dash-metrics, .foot, .form-row { grid-template-columns: 1fr; }
   .nav-links a:not(.btn) { display: none; }
   h1 { font-size: 40px; }
   .hero-stats div + div { border-left: 0; padding-left: 0; }
