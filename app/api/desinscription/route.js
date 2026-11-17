@@ -1,4 +1,4 @@
-import { INVALID_EMAIL_MESSAGE, clientKey, handleUnsubscribe, stateForResult } from "@/lib/unsubscribe.mjs";
+import { MISSING_CONTACT_MESSAGE, clientKey, handleUnsubscribe, stateForResult } from "@/lib/unsubscribe.mjs";
 
 export const dynamic = "force-dynamic";
 
@@ -13,14 +13,20 @@ async function readFields(request) {
     if (!payload || typeof payload !== "object" || Array.isArray(payload)) return null;
     return {
       email: payload.email,
-      confirm: payload.confirm,
+      phone: payload.phone,
+      canaux: payload.canaux,
+      tout: payload.tout,
+      canaux_presents: payload.canaux_presents,
       pm_hp: payload.pm_hp ?? "",
     };
   }
   const form = await request.formData();
   return {
     email: form.get("email"),
-    confirm: form.get("confirm"),
+    phone: form.get("phone"),
+    canaux: form.getAll("canaux"),
+    tout: form.get("tout"),
+    canaux_presents: form.get("canaux_presents"),
     pm_hp: form.get("pm_hp") ?? "",
   };
 }
@@ -40,7 +46,7 @@ export async function POST(request) {
     fields = null;
   }
   if (!fields) {
-    return json({ ok: false, status: 400, message: INVALID_EMAIL_MESSAGE });
+    return json({ ok: false, status: 400, message: MISSING_CONTACT_MESSAGE });
   }
 
   const result = await handleUnsubscribe({
