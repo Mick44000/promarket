@@ -4,7 +4,8 @@ import { recordPageview } from "@/lib/honeylog.mjs";
 export function middleware(request, event) {
   const host = (request.headers.get("host") || "").replace(/:\d+$/, "").toLowerCase();
   const response = NextResponse.next();
-  if (host && host !== "promarket.fr") {
+  const pathname = request.nextUrl?.pathname || "";
+  if ((host && host !== "promarket.fr") || pathname === "/desinscription") {
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
   }
 
