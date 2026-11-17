@@ -1,29 +1,5 @@
 export const metadata = { title: "Mentions légales", robots: { index: false } };
 
-const pendingStyle = {
-  display: "inline-block",
-  margin: "0 0.2em",
-  padding: "0.05em 0.55em 0.12em",
-  borderRadius: "999px",
-  background: "#f6d96a",
-  color: "#3a2e00",
-  fontFamily: "var(--sans)",
-  fontSize: "0.72em",
-  fontWeight: 700,
-  letterSpacing: "0.02em",
-  lineHeight: 1.5,
-  verticalAlign: "0.12em",
-  whiteSpace: "nowrap",
-};
-
-function Pending() {
-  return (
-    <span className="legal-pending" style={pendingStyle}>
-      À confirmer
-    </span>
-  );
-}
-
 export default function Mentions() {
   return (
     <main className="wrap-s article">
@@ -39,18 +15,15 @@ export default function Mentions() {
 
       <h2>Éditeur du site</h2>
       <p>
-        Le site <strong>promarket.fr</strong> est édité par <strong>MON COURTIER ASSURE (MCA)</strong>, société à
-        responsabilité limitée à associé unique (EURL), au capital de 1 000 euros.
+        Le site <strong>promarket.fr</strong> est édité sous le nom commercial <strong>Promarket</strong> par{" "}
+        <strong>MCA</strong>, société à responsabilité limitée à associé unique (EURL), au capital de 1 000 euros.
       </p>
       <p>
         <strong>Promarket</strong> est un nom commercial de MCA.
       </p>
       <ul className="plain">
         <li>
-          <strong>Dénomination sociale :</strong> MON COURTIER ASSURE — <Pending />
-        </li>
-        <li>
-          <strong>Sigle :</strong> MCA
+          <strong>Société éditrice :</strong> MCA
         </li>
         <li>
           <strong>Nom commercial :</strong> Promarket
@@ -74,16 +47,13 @@ export default function Mentions() {
           <strong>RCS :</strong> 853 091 262 R.C.S. Nantes
         </li>
         <li>
-          <strong>Code APE / NAF :</strong> 66.22Z — <Pending />
-        </li>
-        <li>
-          <strong>TVA :</strong> TVA non applicable, article 293 B du code général des impôts — <Pending />
+          <strong>TVA :</strong> TVA non applicable, article 293 B du code général des impôts
         </li>
         <li>
           <strong>Gérant :</strong> Aymeric Chantrel
         </li>
         <li>
-          <strong>Téléphone de l’éditeur :</strong> <Pending />
+          <strong>Téléphone de l’éditeur :</strong> 07 57 59 92 62
         </li>
       </ul>
 
@@ -96,13 +66,13 @@ export default function Mentions() {
       <ul className="plain">
         <li>
           <strong>Courrier électronique :</strong>{" "}
-          <a href="mailto:contact@promarket.fr">contact@promarket.fr</a> — <Pending />
+          <a href="mailto:contact@promarket.fr">contact@promarket.fr</a>
         </li>
         <li>
-          <strong>Téléphone :</strong> <Pending />
+          <strong>Téléphone :</strong> 07 57 59 92 62
         </li>
         <li>
-          <strong>Courrier postal :</strong> MCA, Bureau 3, 2 place Jean V, 44100 Nantes, France — <Pending />
+          <strong>Courrier postal :</strong> MCA, Bureau 3, 2 place Jean V, 44100 Nantes, France
         </li>
       </ul>
       <p>
@@ -125,9 +95,6 @@ export default function Mentions() {
         Téléphone : +1 415 398 5463
         <br />
         Site : <a href="https://vercel.com">https://vercel.com</a>
-      </p>
-      <p>
-        <Pending />
       </p>
 
       <h2>Affiliation et liens rémunérés</h2>
@@ -255,10 +222,8 @@ export default function Mentions() {
         votre consentement à tout moment, aussi simplement que vous l’avez donné.
       </p>
       <p>
-        Le détail des traceurs, de leurs finalités, de leurs durées et des destinataires figure dans la politique
-        cookies — <Pending />. En l’absence actuelle de page dédiée, se reporter à la{" "}
-        <a href="https://promarket.fr/confidentialite">politique de confidentialité</a>, qui devra elle-même être mise à
-        jour.
+        Le détail des traceurs, de leurs finalités, de leurs durées et des destinataires figure dans la{" "}
+        <a href="https://promarket.fr/confidentialite">politique de confidentialité</a>.
       </p>
 
       <h2>Prospection et désinscription</h2>
@@ -276,7 +241,8 @@ export default function Mentions() {
       </p>
       <p>
         Vous pouvez vous opposer à tout moment, gratuitement et sans motif, à la prospection, par canal ou de manière
-        globale, sans avoir à créer de compte, via la page : <Pending />.
+        globale, sans avoir à créer de compte, en écrivant à{" "}
+        <a href="mailto:contact@promarket.fr">contact@promarket.fr</a>.
       </p>
       <p>
         L’opposition à la prospection n’entraîne pas, à elle seule, la suppression d’une fiche éventuellement conservée
