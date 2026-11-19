@@ -2,9 +2,9 @@ import Link from "next/link";
 import { formatLongDate, getGuide, guideReading } from "@/lib/guides";
 
 export const metadata = {
-  title: "Guides GoHighLevel : prix, migration, CRM",
+  title: "Guides GoHighLevel : migration, conformité, agent IA",
   description:
-    "Sommaire des guides GoHighLevel : tarif en France, migrations Kajabi et Systeme.io, SaaS mode, RGPD, délivrabilité, espace membres et CRM pour coachs.",
+    "Sommaire des guides GoHighLevel : mise à disposition de l’outil, migrations Kajabi et Systeme.io, conformité, délivrabilité, espace membres et agent IA.",
   alternates: { canonical: "/guide" },
 };
 
@@ -13,7 +13,7 @@ const updated = "2026-10-20";
 const faqs = [
   [
     "Par quel guide commencer ?",
-    "Par GoHighLevel en France si tu découvres l’outil, puis par le prix avant de choisir un plan. La migration ne se lit qu’une fois l’outil de départ identifié : Kajabi, Systeme.io ou ActiveCampaign.",
+    "Par GoHighLevel en France si tu découvres l’outil, puis par la page qui décrit la mise à disposition. La migration ne se lit qu’une fois l’outil de départ identifié : Kajabi, Systeme.io ou ActiveCampaign.",
   ],
   [
     "Ce sommaire remplace-t-il l’article GoHighLevel France ?",
@@ -29,10 +29,10 @@ const groups = [
   {
     title: "Comprendre l’outil",
     intro:
-      "Commence ici si le compte n’est pas encore ouvert, ou s’il est ouvert et que tu n’en vois pas le bord. Ces deux articles posent le décor français : ce que GoHighLevel remplace, et ce que le prix affiché ne dit pas.",
+      "Commence ici si le compte n’est pas encore ouvert, ou s’il est ouvert et que tu n’en vois pas le bord. Ces deux articles posent le décor français : ce que GoHighLevel réunit, et comment Promarket met l’outil à disposition.",
     items: [
       ["gohighlevel-france", "À lire en premier. Il décrit ce que l’outil réunit, et ce qui change dès que les contacts, les factures et les SMS sont en France."],
-      ["prix-gohighlevel-france", "À lire avant de choisir un plan. Starter, Unlimited et Agency Pro n’ouvrent pas les mêmes droits, et l’usage SMS ou email n’est pas dans l’abonnement."],
+      ["prix-gohighlevel-france", "À lire pour le modèle : frais de setup, puis un abonnement mensuel. Aucun montant n’est publié sur le site."],
     ],
   },
   {
@@ -90,7 +90,7 @@ export default function GuideIndex() {
         <span>{`Mis à jour le ${formatLongDate(updated)}`}</span>
       </p>
       <p className="lede">
-        Ce sommaire classe les guides GoHighLevel par décision : le tarif, la migration, le CRM, l’envoi, le droit
+        Ce sommaire classe les guides GoHighLevel par décision : l’outil, la migration, le CRM, l’envoi, le droit
         d’écrire. Le cadre francophone — facture en euros, interface surtout en anglais — est dans l’article{" "}
         <Link href="/guide/gohighlevel-france">GoHighLevel en France</Link>, pas répété ici.
       </p>
@@ -101,20 +101,20 @@ export default function GuideIndex() {
         anglais. Les pages, les mails et l’accompagnement sont en français.
       </p>
       <p>
-        L’ordre de lecture tient en une ligne : la référence, le prix, puis la migration qui correspond à l’outil que
-        tu quittes. Le reste se lit au moment du geste — avant un envoi, avant d’ouvrir un accès élève, avant de
-        brancher un agent.
+        L’ordre de lecture tient en une ligne : la référence, la mise à disposition, puis la migration qui correspond à
+        l’outil que tu quittes. Le reste se lit au moment du geste — avant un envoi, avant d’ouvrir un accès élève,
+        avant de brancher un agent.
       </p>
       <p>
         Si tu veux que ce soit installé plutôt que seulement lu, le parcours est sur les pages{" "}
-        <Link href="/services">Services</Link> et <Link href="/methode">Méthode</Link>. Le diagnostic de stack, gratuit et
-        sans engagement, est sur l’<Link href="/audit">audit</Link>. Trois pages plus courtes cadrent l’offre :{" "}
+        <Link href="/services">Offre</Link> et <Link href="/methode">Méthode</Link>. La demande passe par le{" "}
+        <Link href="/contact">formulaire</Link>. Trois pages plus courtes cadrent l’offre :{" "}
         <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>,{" "}
         <Link href="/migration-gohighlevel">la migration</Link> et le{" "}
         <Link href="/crm-coachs">CRM pour coachs</Link>.
       </p>
       <p>
-        Une question, une page. Mélanger le prix, la migration et le CRM dans un seul texte produit un article que
+        Une question, une page. Mélanger la mise à disposition, la migration et le CRM dans un seul texte produit un article que
         personne ne peut citer, et des titres qui se font concurrence. Le tableau dit où aller. Les cartes, plus bas,
         disent dans quel ordre le lire.
       </p>
@@ -133,8 +133,8 @@ export default function GuideIndex() {
               <td><Link href="/guide/gohighlevel-france">GoHighLevel en France</Link></td>
             </tr>
             <tr>
-              <td>Le prix, le tarif, l’usage</td>
-              <td><Link href="/guide/prix-gohighlevel-france">Prix et tarif</Link></td>
+              <td>La mise à disposition, sans grille publiée</td>
+              <td><Link href="/guide/prix-gohighlevel-france">Mise à disposition</Link></td>
             </tr>
             <tr>
               <td>Quitter l’outil actuel, sans couper les accès</td>
@@ -180,12 +180,11 @@ export default function GuideIndex() {
         </table>
       </div>
       <p>
-        Lis le prix avant de comparer avec un outil français : les plans publics sont en dollars, hors usage. Lis la
-        délivrabilité et le RGPD avant le premier envoi, pas après une chute d’ouvertures. Lis l’espace membres avant de
-        promettre que Kajabi se « transfère ». Le SEO, le GEO et les agents IA viennent une fois le compte propre : un
-        agent branché sur un pipeline vide n’a rien à qualifier. Cet article est à part,{" "}
-        <Link href="/guide/seo-geo-agent-ia-gohighlevel">ici</Link>, et la mise en œuvre est sur{" "}
-        <Link href="/referencement">SEO et GEO</Link>.
+        Lis la délivrabilité et le RGPD avant le premier envoi, pas après une chute d’ouvertures. Lis l’espace membres
+        avant de promettre que Kajabi se « transfère ». L’agent vient une fois le compte propre : un agent branché sur
+        un pipeline vide n’a rien à qualifier. Cet article est à part,{" "}
+        <Link href="/guide/seo-geo-agent-ia-gohighlevel">ici</Link>, et la mise en œuvre est dans l’
+        <Link href="/services">offre</Link>.
       </p>
       <p>
         Ce sommaire ne donne pas d’avis clients, pas de note, pas de témoignage. Il ne convertit pas les dollars en
@@ -221,16 +220,15 @@ export default function GuideIndex() {
 
       <h2>Ce que ces guides ne font pas</h2>
       <p>
-        Ils n’inventent pas un tarif, un client ou une statistique. Quand un montant HighLevel est écrit, il vient de
-        la page tarifs publique ou du guide de facturation de l’éditeur, et l’article des prix donne le lien. Les
-        montants ProMarket déjà publiés restent à leur place : le formulaire d’audit est gratuit, l’audit écrit est à
-        1 000 € HT, le suivi à 300 € par mois à partir de 3 heures. Aucun n’est la licence.
+        Ils n’inventent pas un tarif, un client ou une statistique. Promarket ne publie pas de montant. Le modèle est
+        des frais de setup, puis un abonnement mensuel pour la mise à disposition des outils et la maintenance. L’outil
+        est fourni par Promarket.
       </p>
       <p>
         Ils ne remplacent pas un conseil juridique. Le guide RGPD est la checklist qu’on applique, avec la page de la
         CNIL en source. Ils ne remplacent pas non plus la méthode : l’ordre d’une bascule — inventaire, reconstruction,
-        test, puis seulement le domaine — est sur la page <Link href="/methode">Méthode</Link>. Le menu de ce qui se
-        facture à part est sur <Link href="/services">Services</Link>.
+        test, puis seulement le domaine — est sur la page <Link href="/methode">Méthode</Link>. L’offre est sur{" "}
+        <Link href="/services">cette page</Link>.
       </p>
       <ul className="checks">
         <li>Un sujet, une URL. Si deux pages disent la même chose, l’une des deux est de trop.</li>

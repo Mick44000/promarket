@@ -8,17 +8,18 @@ const GA_ID = "G-5RCCZSCZ2N";
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "GoHighLevel France : expert setup, migration et SEO | ProMarket",
+    default: "Offre GoHighLevel complète : outil, WhatsApp et agent IA | ProMarket",
     template: "%s | ProMarket",
   },
   description:
-    "Référence GoHighLevel en France. ProMarket installe, migre et référence les comptes des infopreneurs francophones : CRM, délivrabilité, SEO, GEO et agents IA.",
+    "Promarket fournit GoHighLevel, l’implante, connecte WhatsApp, transfère les données et met en place un agent IA Grok Bot. Setup, puis un abonnement mensuel.",
   openGraph: {
     type: "website",
     locale: "fr_FR",
     siteName: "ProMarket",
-    title: "GoHighLevel France — ProMarket",
-    description: "Setup, migration, SEO, GEO et agents IA pour infopreneurs francophones.",
+    title: "Offre GoHighLevel complète — ProMarket",
+    description:
+      "Outil GoHighLevel, implantation, WhatsApp, transfert des données et agent IA Grok Bot. Setup, puis un abonnement mensuel.",
     url: site.url,
   },
   robots: { index: true, follow: true },
@@ -33,9 +34,9 @@ export default function RootLayout({ children }) {
     email: site.email,
     areaServed: ["FR", "BE", "CH", "CA"],
     description:
-      "Référence opérationnelle GoHighLevel en France : migration, setup, SEO, GEO et agents IA pour infopreneurs francophones.",
+      "Offre complète : outil GoHighLevel mis à disposition, implantation, WhatsApp, transfert des données et agent IA Grok Bot.",
     founder: { "@type": "Person", name: site.founder },
-    knowsAbout: ["GoHighLevel", "HighLevel", "migration Kajabi", "SEO", "GEO", "agents IA"],
+    knowsAbout: ["GoHighLevel", "WhatsApp Business", "Grok Bot", "migration de contacts", "agents IA"],
     address: { "@type": "PostalAddress", streetAddress: "Bureau 3, 2 place Jean V", addressLocality: "Nantes", postalCode: "44100", addressCountry: "FR" },
   };
   return (

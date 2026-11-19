@@ -144,7 +144,7 @@ export default function GuidePage({ params }) {
           ))}
         </section>
       ) : null}
-      <p className="note">ProMarket est indépendant de HighLevel, LLC. Les prix plateforme cités sont les tarifs publics en dollars, hors taxes américaines et hors usage, relevés le 20 octobre 2026. Les textes décrivent une méthode d’installation. Ils ne sont pas un conseil juridique ou fiscal.</p>
+      <p className="note">Promarket met GoHighLevel à disposition. Promarket n’est pas l’éditeur du logiciel. Les textes décrivent une méthode. Ils ne sont pas un conseil juridique ou fiscal.</p>
       {guide.sources?.length ? (
         <p className="note">
           Sources publiques :{" "}
@@ -158,12 +158,11 @@ export default function GuidePage({ params }) {
         </p>
       ) : null}
       <p>
-        La mise en œuvre est sur les pages <Link href="/services">Services</Link>, <Link href="/methode">Méthode</Link> et{" "}
-        <Link href="/audit">Audit de stack</Link>. Le cadre francophone est résumé dans{" "}
-        <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>.
+        La mise en œuvre est sur les pages <Link href="/services">Offre</Link> et <Link href="/methode">Méthode</Link>.
+        Le cadre francophone est résumé dans <Link href="/agence-gohighlevel-nantes">l’agence à Nantes</Link>.
       </p>
       {guide.bridges?.length ? <RelatedContent hrefs={guide.bridges} label="Pages liées" /> : null}
-      <p><Link className="btn" href="/audit">Faire l’audit de ta stack</Link></p>
+      <p><Link className="btn" href="/contact">Demander une étude</Link></p>
       {related.length ? (
         <nav aria-label="Articles liés">
           <p className="kicker">À lire ensuite</p>

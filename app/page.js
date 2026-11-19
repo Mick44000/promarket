@@ -1,43 +1,14 @@
+import Link from "next/link";
+import { OfferCta } from "@/components/OfferCta";
+import { offerFaqs, offerSteps } from "@/lib/offer";
 
 export const metadata = {
-  title: { absolute: "GoHighLevel France : expert setup, migration, SEO et agents IA | ProMarket" },
+  title: { absolute: "Offre GoHighLevel complète : outil, WhatsApp et agent IA | ProMarket" },
   description:
-    "Référence GoHighLevel en France. Migration, setup, délivrabilité, SEO, GEO et agents IA pour coachs et infopreneurs francophones. Audit à Nantes, à distance.",
+    "Promarket fournit GoHighLevel, l’implante, connecte WhatsApp, transfère les données et met en place un agent IA Grok Bot. Setup, puis un abonnement mensuel.",
   alternates: { canonical: "/" },
-  keywords: ["GoHighLevel France", "expert GoHighLevel", "migration GoHighLevel", "SEO GEO", "agent IA"],
+  keywords: ["GoHighLevel", "WhatsApp GoHighLevel", "agent IA", "Grok Bot", "Promarket"],
 };
-
-const personas = [
-  ["Débutant sur GHL", "Nouveau sur GHL", "Setup complet", "Vous venez de souscrire à GoHighLevel ou vous y pensez. Vous avez besoin d’un setup propre dès le départ, sans passer des semaines à apprendre."],
-  ["Déjà sur GHL, mais sous-utilisé", "Audit & optimisation", "Migration", "Vous payez GHL depuis des mois mais n’utilisez que 20 % de ses fonctionnalités. Il est temps d’en tirer la valeur réelle."],
-  ["Migration depuis un autre outil", "Migration", "Zéro perte de data", "Vous venez de Systeme.io, ClickFunnels, Kajabi. Vous voulez migrer sans perdre vos contacts, emails et formations."],
-] ;
-
-const scopes = [
-  ["DNS & domaines", "Connexion de votre domaine", "Configuration DNS, sous-domaines GHL, certificats SSL, redirections. Votre domaine branché proprement dès le départ.", ["Délégation de sous-domaine", "SSL automatique", "Redirections 301"]],
-  ["Email & délivrabilité", "Infrastructure email solide", "SPF, DKIM, DMARC configurés. Warm-up progressif. Vos emails arrivent en boîte de réception.", ["SPF / DKIM / DMARC", "Warm-up du domaine d’envoi", "Tests anti-spam"]],
-  ["CRM & pipeline", "Structure commerciale GHL", "Pipelines, étapes, champs personnalisés. Votre CRM reflète votre processus de vente réel.", ["Pipelines personnalisés", "Champs custom", "Tags et segments"]],
-  ["Automatisations", "Workflows qui travaillent à votre place", "Séquences email, nurturing, onboarding, relances. Des workflows construits pour convertir.", ["Séquences de bienvenue", "Relances d’abandon", "Onboarding automatisé"]],
-  ["Espace membres", "Vos formations en ligne", "Modules, leçons, accès par offre, progression. Vos cours vivent dans le même compte que la vente.", ["Structure de cours", "Accès par produit", "Drip content"]],
-  ["Funnels & paiements", "Pages de vente et checkout", "Opt-in, vente, checkout Stripe. Order bumps, upsells, confirmation automatique.", ["Intégration Stripe", "Pages de vente", "Upsells et order bump"]],
-] ;
-
-const steps = [
-  ["J+2", "Analyse de votre situation actuelle", "Audit de votre stack existante, de vos accès, de votre domaine et de vos emails.", ["Accès GHL", "DNS", "Email"]],
-  ["J+5", "Plan de migration détaillé", "Étapes numérotées, dépendances identifiées, risques documentés.", ["Étapes", "Risques", "Dépendances"]],
-  ["J+7", "Estimation du temps de travail", "Chaque tâche estimée. Vous avez une fourchette budgétaire avant de vous engager.", ["Estimation", "Budget"]],
-  ["J+7", "Macro-planning de mise en production", "Un planning semaine par semaine. Vous savez quand le compte sera opérationnel.", ["Planning", "Jalons", "Livrables"]],
-] ;
-
-const faqs = [
-  ["Je n’ai pas encore GoHighLevel. Est-ce que vous le fournissez ?", "Non. L’abonnement se prend directement chez HighLevel. ProMarket configure le compte. Nous sommes indépendants de HighLevel, LLC."],
-  ["Combien de temps dure une migration depuis Systeme.io ou Kajabi ?", "Ça dépend du volume de contacts, de cours et de paiements. L’audit donne la fourchette. Les mises en production livrées vont de 48 h à trois semaines."],
-  ["Que se passe-t-il si j’ai besoin d’aide après le setup ?", "Le suivi mensuel démarre à 300 € par mois, à partir de 3 h. Maintenance, évolutions et support, avec un suivi dans Copilot."],
-  ["Travaillez-vous à distance uniquement ?", "Oui. Remote, depuis la France. Les accès se font sur votre sous-compte, rien ne transite par une machine partagée."],
-  ["L’audit est-il déduit du setup si on continue ensemble ?", "Non. L’audit est un forfait à part, 1 000 € HT, avec un livrable. Le setup est chiffré ensuite, sur devis, selon le périmètre exact."],
-  ["GoHighLevel est-il adapté à un infopreneur en France ?", "Oui, à condition de traiter la facture en euros, la TVA, les SMS français, la délivrabilité et le RGPD. L’interface reste surtout en anglais. Le setup, lui, est en français."],
-  ["Vous faites le SEO, le GEO et les agents IA ?", "Oui. Le SEO structure les pages pour Google. Le GEO les rend citables par les IA. L’agent qualifie et écrit dans le CRM GoHighLevel. Le détail est sur la page Référencement."],
-] ;
 
 export default function HomePage() {
   return (
@@ -48,7 +19,7 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: faqs.map(([q, a]) => ({
+            mainEntity: offerFaqs.map(([q, a]) => ({
               "@type": "Question",
               name: q,
               acceptedAnswer: { "@type": "Answer", text: a },
@@ -59,200 +30,110 @@ export default function HomePage() {
       <section className="wrap hero">
         <div>
           <p className="crumb">
-            <a href="/">Accueil</a>
+            <Link href="/">Accueil</Link>
             {" › "}
-            GoHighLevel
+            Offre
           </p>
           <p className="badge">
             <i />
-            Expert GoHighLevel certifié
+            Une seule offre
           </p>
           <h1>
-            Votre GHL,
+            Une offre complète,
             <br />
-            configuré
-            <br />
-            par un <span className="accent">vrai expert</span>
+            de l’outil <span className="accent">à l’agent</span>
           </h1>
           <p className="lede">
-            Installation, migration, automatisations, espace membres — je prends en charge l’intégralité de votre setup
-            GoHighLevel pour que vous soyez opérationnel rapidement.
+            Promarket fournit GoHighLevel, l’implante, connecte WhatsApp, transfère vos données et met en place un
+            agent IA Grok Bot relié au compte. Des frais de setup, puis un abonnement mensuel pour la mise à disposition
+            des outils et la maintenance.
           </p>
           <div className="hero-actions">
-            <a className="btn" href="/audit">
-              Démarrer avec un audit →
-            </a>
-            <a className="btn ghost" href="#perimetre">
-              Voir ce qui est inclus
-            </a>
-          </div>
-          <div className="hero-stats">
-            <div>
-              <b>48h</b>
-              <span>Mise en prod. standard</span>
-            </div>
-            <div>
-              <b>+120</b>
-              <span>Projets GHL livrés</span>
-            </div>
-            <div>
-              <b>100%</b>
-              <span>Remote · France</span>
-            </div>
+            <OfferCta />
+            <OfferCta alt ghost />
           </div>
         </div>
-        <aside className="dash" aria-label="Aperçu d’un sous-compte GoHighLevel">
+        <aside className="dash" aria-label="Les six composantes de l’offre">
           <div className="dash-top">
             <div>
-              <p className="dash-kicker">GoHighLevel — sous-compte ProMarket</p>
-              <strong>Dashboard client</strong>
-            </div>
-            <span className="live">
-              <i />
-              Live
-            </span>
-          </div>
-          <div className="dash-metrics">
-            <div>
-              <b>347</b>
-              <span>Contacts</span>
-            </div>
-            <div>
-              <b>12</b>
-              <span>Opportunités</span>
-            </div>
-            <div>
-              <b>94%</b>
-              <span>Délivrabilité</span>
+              <p className="dash-kicker">Parcours</p>
+              <strong>De l’outil au suivi</strong>
             </div>
           </div>
-          <p className="pipe-title">Pipeline — Offre principale</p>
-          <div className="pipe">
-            <div>
-              <h3>Prospect</h3>
-              <div className="deal">
-                <b>Sophie M.</b>
-                <span>2 400 €</span>
-              </div>
-              <div className="deal">
-                <b>Jean-Paul R.</b>
-                <span>1 800 €</span>
-              </div>
-            </div>
-            <div>
-              <h3>Appel</h3>
-              <div className="deal">
-                <b>Marie C.</b>
-                <span>3 200 €</span>
-              </div>
-            </div>
-            <div>
-              <h3>Signé</h3>
-              <div className="deal">
-                <b>Lucas B.</b>
-                <span>4 900 €</span>
-              </div>
-            </div>
-          </div>
-          <ul className="activity">
-            <li>
-              Séquence onboarding déclenchée
-              <time>2 min</time>
-            </li>
-            <li>
-              Nouveau contact — Lucas B.
-              <time>14 min</time>
-            </li>
-            <li>
-              RDV confirmé — Sophie M.
-              <time>1 h</time>
-            </li>
-          </ul>
+          <ol className="activity" style={{ listStyle: "none" }}>
+            {offerSteps.map((step) => (
+              <li key={step.id}>
+                <span>
+                  {step.n} {step.title}
+                </span>
+              </li>
+            ))}
+          </ol>
         </aside>
       </section>
 
-      <section className="band" id="pour-qui" style={{ paddingTop: 10 }}>
+      <section className="band" id="parcours">
         <div className="wrap">
-          <p className="kicker">Pour qui</p>
-          <h2>Vous êtes au bon endroit si…</h2>
+          <p className="kicker">Parcours</p>
+          <h2>Six composantes, bout en bout.</h2>
           <p className="lede">
-            GoHighLevel est puissant, et dense. Je m’adresse aux créateurs qui ont besoin d’un setup solide, pas d’une
-            formation de 40 h. Le quotidien d’un coach ou d’un formateur est sur{" "}
-            <a href="/crm-coachs">CRM pour coachs</a>. Si vous quittez un autre outil, l’ordre est sur{" "}
-            <a href="/migration-gohighlevel">Migration</a>.
-          </p>
-          <div className="grid-3" style={{ marginTop: 22 }}>
-            {personas.map(([title, a, b, text]) => (
-              <article className="card" key={title}>
-                <h3>{title}</h3>
-                <p className="muted">{text}</p>
-                <div className="chips">
-                  <span>{a}</span>
-                  <span>{b}</span>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="band dark" id="perimetre">
-        <div className="wrap">
-          <p className="kicker">Périmètre</p>
-          <h2>Ce que je configure pour vous</h2>
-          <p className="lede">
-            Chaque projet commence par un audit. Voici les blocs couverts — tout ou partie, selon votre situation. Le détail
-            est sur les pages <a href="/services">Services</a> et <a href="/methode">Méthode</a>. Les centres
-            laser et instituts ont une <a href="/instituts">offre à part</a>. L’email se règle avec le guide{" "}
-            <a href="/guide/delivrabilite-email-gohighlevel">délivrabilité</a>, l’accès aux cours avec le guide{" "}
-            <a href="/guide/espace-membres-gohighlevel">espace membres</a>, les pages visibles avec{" "}
-            <a href="/referencement">SEO et GEO</a>. Les tarifs publics de la plateforme, en dollars et hors usage,
-            sont dans le guide <a href="/guide/prix-gohighlevel-france">prix</a>.
-          </p>
-          <div className="grid-3" style={{ marginTop: 22 }}>
-            {scopes.map(([label, title, text, ticks]) => (
-              <article className="card" key={label}>
-                <p className="scope-label">{label}</p>
-                <h3 style={{ marginTop: 8 }}>{title}</h3>
-                <p className="muted">{text}</p>
-                <ul className="ticks">
-                  {ticks.map((tick) => (
-                    <li key={tick}>{tick}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="band" id="methode">
-        <div className="wrap">
-          <p className="kicker">La méthode</p>
-          <h2>On commence toujours par l’audit</h2>
-          <p className="lede">
-            1 000 € HT. Un livrable concret avant de dépenser un euro de plus. Vous savez ce qui doit être fait, dans quel
-            ordre, et pour quel budget.
+            Ce n’est pas un menu de prestations à assembler. Le détail de chaque étape est sur la page{" "}
+            <Link href="/services">Offre</Link>. La façon de transférer les données est sur la page{" "}
+            <Link href="/methode">Méthode</Link>.
           </p>
           <div className="grid-2" style={{ marginTop: 22 }}>
-            {steps.map(([when, title, text, chips]) => (
-              <article className="card" key={title}>
-                <p className="when">{when}</p>
-                <h3>{title}</h3>
-                <p className="muted">{text}</p>
-                <div className="chips">
-                  {chips.map((chip) => (
-                    <span key={chip}>{chip}</span>
-                  ))}
-                </div>
+            {offerSteps.map((step) => (
+              <article className="card" key={step.id} id={step.id}>
+                <p className="step-index">{step.n}</p>
+                <h3>{step.title}</h3>
+                <p className="muted">{step.text}</p>
               </article>
             ))}
           </div>
-          <div className="hero-actions">
-            <a className="btn" href="/audit">
-              Commander l’audit →
-            </a>
+        </div>
+      </section>
+
+      <section className="band dark" id="modele">
+        <div className="wrap">
+          <p className="kicker">Modèle</p>
+          <h2>Frais de setup, puis un abonnement mensuel.</h2>
+          <p className="lede">
+            Le setup couvre la mise en place : l’outil, l’implantation, WhatsApp, le transfert des données et l’agent.
+            L’abonnement mensuel couvre ensuite la mise à disposition des outils et la maintenance. Les montants ne sont
+            pas publiés ici.
+          </p>
+          <div className="grid-2" style={{ marginTop: 22 }}>
+            <article className="card">
+              <p className="scope-label">Au démarrage</p>
+              <h3 style={{ marginTop: 8 }}>Frais de setup</h3>
+              <p className="muted">
+                La mise en place du compte, de la messagerie, du transfert et de l’agent. Le périmètre se précise à
+                partir de votre situation.
+              </p>
+            </article>
+            <article className="card">
+              <p className="scope-label">Ensuite</p>
+              <h3 style={{ marginTop: 8 }}>Abonnement mensuel</h3>
+              <p className="muted">
+                La mise à disposition des outils et la maintenance, avec le suivi du compte. La désinscription par canal
+                est déjà en place.
+              </p>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <section className="band" id="pour-qui">
+        <div className="wrap">
+          <p className="kicker">Pour qui</p>
+          <h2>Coachs, formateurs, business en ligne.</h2>
+          <p className="lede">
+            L’offre est la même pour un coach, un formateur ou un business en ligne qui veut un seul compte pour le
+            CRM, les messages et le suivi. Le siège est à Nantes. Le travail se fait à distance, en français, pour des
+            équipes en France, en Belgique, en Suisse et au Canada. Le cadre local est sur la page{" "}
+            <Link href="/agence-gohighlevel-nantes">agence</Link>. Le quotidien d’un coach est sur{" "}
+            <Link href="/crm-coachs">coachs et formateurs</Link>.
+          </p>
         </div>
       </section>
 
@@ -280,87 +161,9 @@ export default function HomePage() {
             <p className="kicker">À propos</p>
             <h2>Aymeric Chantrel</h2>
             <p className="lede">
-              Partenaire technique, pas coach business. Vous gardez la méthode. Je pose le CRM, les tunnels, l’espace
-              membres, les paiements et les relances — à distance, depuis Nantes. Le cadre est sur la page{" "}
-              <a href="/agence-gohighlevel-nantes">agence</a>.
+              Partenaire technique. Vous gardez la conduite de votre activité. Promarket pose le compte, la messagerie,
+              le transfert et l’agent — à distance, depuis Nantes.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="band dark" id="tarifs">
-        <div className="wrap">
-          <p className="kicker">Tarification</p>
-          <h2>Un modèle simple et transparent</h2>
-          <p className="lede">Vous commencez toujours par l’audit. La suite dépend de ce qu’on trouve.</p>
-          <div className="prices" style={{ marginTop: 22 }}>
-            <article className="price">
-              <p className="flag">Étape 1</p>
-              <h3>Audit & préconisation</h3>
-              <p className="amount">1 000 €</p>
-              <p className="muted">HT. Livrable complet en 7 jours. Forfait fixe.</p>
-              <ul className="ticks">
-                <li>Analyse de votre stack</li>
-                <li>Plan de migration détaillé</li>
-                <li>Macro-planning de production</li>
-              </ul>
-            </article>
-            <article className="price featured">
-              <p className="flag">Le plus choisi · Étape 2</p>
-              <h3>Setup & mise en production</h3>
-              <p className="amount">Sur devis</p>
-              <p className="muted">Exécution du plan. Forfait fixé après l’audit, selon le périmètre.</p>
-              <ul className="ticks">
-                <li>Configuration GHL complète</li>
-                <li>DNS, email, espace membres</li>
-                <li>Livraison en 48 h – 3 semaines</li>
-              </ul>
-            </article>
-            <article className="price">
-              <p className="flag">Suivi mensuel</p>
-              <h3>Retainer maintenance</h3>
-              <p className="amount">300 €</p>
-              <p className="muted">Par mois. À partir de 3 h. Maintenance, évolutions, support.</p>
-              <ul className="ticks">
-                <li>Heures dédiées chaque mois</li>
-                <li>Suivi via Copilot</li>
-                <li>Réactivité cadrée</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="band" id="acquisition" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <p className="kicker">Référence France</p>
-          <h2>GoHighLevel, SEO, GEO et agents IA.</h2>
-          <p className="lede">
-            ProMarket est la couche francophone de GoHighLevel : le compte, puis la visibilité. Google pour le SEO, les
-            réponses des IA pour le GEO, un agent qui qualifie dans le CRM.
-          </p>
-          <p className="lede">
-            Trois portes d’entrée : <a href="/agence-gohighlevel-nantes">l’agence à Nantes</a>,{" "}
-            <a href="/migration-gohighlevel">la migration vers GoHighLevel</a> et{" "}
-            <a href="/crm-coachs">le CRM pour coachs et formateurs</a>. Le sommaire des articles est sur le{" "}
-            <a href="/guide">guide</a>.
-          </p>
-          <div className="grid-3" style={{ marginTop: 22 }}>
-            <a href="/guide/gohighlevel-france" className="card" style={{ textDecoration: "none" }}>
-              <p className="scope-label">Guide</p>
-              <h3 style={{ marginTop: 8 }}>GoHighLevel en France</h3>
-              <p className="muted">Prix en dollars, facture en euros, TVA, SMS, RGPD, SaaS mode.</p>
-            </a>
-            <a href="/referencement" className="card" style={{ textDecoration: "none" }}>
-              <p className="scope-label">Offre</p>
-              <h3 style={{ marginTop: 8 }}>SEO et GEO</h3>
-              <p className="muted">Des pages que Google indexe et que les IA peuvent citer.</p>
-            </a>
-            <a href="/guide/seo-geo-agent-ia-gohighlevel" className="card" style={{ textDecoration: "none" }}>
-              <p className="scope-label">Agent</p>
-              <h3 style={{ marginTop: 8 }}>Agent IA dans GHL</h3>
-              <p className="muted">Qualification, rendez-vous, passage à un humain. Branché au pipeline.</p>
-            </a>
           </div>
         </div>
       </section>
@@ -368,9 +171,9 @@ export default function HomePage() {
       <section className="band" id="faq">
         <div className="wrap wrap-s">
           <p className="kicker">Questions fréquentes</p>
-          <h2>Ce qu’on me demande souvent</h2>
+          <h2>Ce que l’offre comprend</h2>
           <div style={{ marginTop: 12 }}>
-            {faqs.map(([q, a]) => (
+            {offerFaqs.map(([q, a]) => (
               <details className="qa" key={q}>
                 <summary>{q}</summary>
                 <p>{a}</p>
@@ -380,23 +183,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="band ink" id="appel">
+      <section className="band ink" id="contact">
         <div className="wrap" style={{ display: "flex", justifyContent: "space-between", gap: 20, flexWrap: "wrap", alignItems: "center" }}>
           <div>
-            <p className="kicker">Prêt ?</p>
-            <h2>Commençons par comprendre votre situation</h2>
+            <p className="kicker">Suite</p>
+            <h2>Décrivez votre situation</h2>
             <p className="muted">
-              Un appel de 30 minutes, gratuit, sans engagement. On fait le point sur votre stack, et je vous dis si GHL est
-              la bonne option.
+              Le formulaire sert à demander une étude ou à être rappelé. Il n’y a pas de prise de rendez-vous sur ce
+              site.
             </p>
           </div>
           <div className="hero-actions" style={{ marginTop: 0 }}>
-            <a className="btn" href="mailto:contact@promarket.fr?subject=Appel%20ProMarket">
-              Réserver un appel gratuit
-            </a>
-            <a className="btn ghost" href="/audit">
-              Commander l’audit
-            </a>
+            <OfferCta />
+            <OfferCta alt ghost />
           </div>
         </div>
       </section>
