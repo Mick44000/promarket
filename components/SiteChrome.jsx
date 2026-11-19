@@ -1,4 +1,4 @@
-import { nav } from "@/lib/site";
+import { cta, nav } from "@/lib/site";
 
 export function Header() {
   return (
@@ -17,8 +17,8 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <a href="/audit" className="btn">
-            Audit de stack
+          <a href={cta.href} className="btn">
+            {cta.label}
           </a>
         </div>
       </nav>

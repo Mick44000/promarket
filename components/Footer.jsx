@@ -2,14 +2,12 @@ import { guides } from "@/lib/guides";
 import { site } from "@/lib/site";
 
 const offer = [
-  ["/services", "Services"],
+  ["/services", "L’offre"],
+  ["/contact", "Demander une étude"],
   ["/methode", "Méthode"],
-  ["/audit", "Audit de stack"],
-  ["/instituts", "Instituts et centres laser"],
-  ["/referencement", "SEO et GEO"],
+  ["/migration-gohighlevel", "Transfert des données"],
+  ["/crm-coachs", "Coachs et formateurs"],
   ["/agence-gohighlevel-nantes", "Agence à Nantes"],
-  ["/migration-gohighlevel", "Migration"],
-  ["/crm-coachs", "CRM pour coachs"],
 ];
 
 const legal = [
@@ -25,7 +23,8 @@ export function Footer() {
         <div>
           <strong style={{ color: "var(--ink)" }}>{site.name}</strong>
           <p style={{ margin: "6px 0 0", maxWidth: 360 }}>
-            Setup, migration et audit GoHighLevel pour les infopreneurs francophones. Indépendant de HighLevel, LLC. ©{" "}
+            Outil GoHighLevel, implantation, WhatsApp, transfert des données et agent IA Grok Bot. Frais de setup,
+            puis un abonnement mensuel pour la mise à disposition des outils et la maintenance. ©{" "}
             {new Date().getFullYear()} Promarket. Promarket est une marque de MCA {site.legalForm} — SIREN {site.siren}.
           </p>
         </div>

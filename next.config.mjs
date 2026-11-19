@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const legacyRedirects = [
   ["/mentions-legales726363", "/mentions-legales"],
-  ["/auditmarketing", "/audit"],
-  ["/contact", "/"],
+  ["/auditmarketing", "/contact"],
+  ["/audit", "/contact"],
+  ["/instituts", "/services"],
+  ["/referencement", "/services"],
   ["/gohighlevel", "/guide/gohighlevel-france"],
   ["/microsoft", "/services"],
   ["/module", "/guide/espace-membres-gohighlevel"],

@@ -4,43 +4,38 @@ import { getGuide } from "@/lib/guides";
 const landings = {
   "/crm-coachs": {
     kicker: "Offre",
-    title: "CRM pour coachs",
-    text: "Pipeline, rendez-vous, relances et accès au cours dans le même compte GoHighLevel.",
+    title: "Coachs et formateurs",
+    text: "La même offre complète, quand l’activité est le coaching, la formation ou un business en ligne.",
   },
   "/agence-gohighlevel-nantes": {
     kicker: "Offre",
     title: "Agence à Nantes",
-    text: "Le siège, le cadre francophone, et ce qui se configure à distance.",
+    text: "Le siège est à Nantes. Le travail se fait à distance, en français.",
   },
   "/migration-gohighlevel": {
     kicker: "Offre",
-    title: "Migration",
-    text: "L’ordre pour quitter Kajabi, Systeme.io ou ActiveCampaign sans couper les accès.",
+    title: "Transfert des données",
+    text: "Contacts et historique repris depuis l’outil précédent, sans en faire une offre à part.",
   },
   "/services": {
     kicker: "Offre",
-    title: "Services",
-    text: "Migration, setup, délivrabilité, SaaS mode, référencement et agents IA.",
+    title: "L’offre",
+    text: "Outil GoHighLevel, implantation, WhatsApp, transfert des données, agent IA Grok Bot, maintenance.",
   },
-  "/referencement": {
-    kicker: "Offre",
-    title: "SEO et GEO",
-    text: "Des pages que Google peut lire, et que les réponses des IA peuvent citer.",
+  "/contact": {
+    kicker: "Contact",
+    title: "Demander une étude",
+    text: "Le formulaire, pour décrire la situation ou être rappelé. Pas de prise de rendez-vous.",
   },
   "/methode": {
-    kicker: "Offre",
+    kicker: "Méthode",
     title: "Méthode",
     text: "Inventaire, reconstruction, bascule, puis les jours d’après.",
   },
   "/guide": {
     kicker: "Guide",
     title: "Tous les articles",
-    text: "Prix, migrations, SaaS mode, RGPD, délivrabilité, espace membres, SEO.",
-  },
-  "/audit": {
-    kicker: "Offre",
-    title: "Audit de stack",
-    text: "Le formulaire gratuit compare les outils. Le forfait écrit, lui, est à part.",
+    text: "Migrations, conformité, délivrabilité, espace membres, agent IA.",
   },
 };
 
