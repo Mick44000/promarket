@@ -89,8 +89,8 @@ export default function MyGoddessRevolutionCasePage() {
         <h2>La vidéo et la masterclass</h2>
         <p>
           Un bloc de l’accueil demande un email pour ouvrir une vidéo. Le libellé lu est « Entre ton email pour
-          accéder à la vidéo complète ». À côté : « Regarder la vidéo gratuitement », puis « Gratuit · Sans
-          engagement · Accès immédiat ». Le formulaire est le point d’entrée visible. La page ne dit pas ce qui est
+          accéder à la vidéo complète ». À côté : « REGARDER LA VIDEO GRATUITEMENT », puis « Gratuit · Sans engagement ·
+          Accès immédiat ». Le formulaire est le point d’entrée visible. La page ne dit pas ce qui est
           fait de l’adresse ensuite.
         </p>
         <p>
