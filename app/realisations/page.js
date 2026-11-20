@@ -3,12 +3,12 @@ import Link from "next/link";
 export const metadata = {
   title: "Réalisations",
   description:
-    "Sites développés par Promarket. La fiche Fenua Spot décrit l’annuaire de la Polynésie française tel qu’il est en ligne.",
+    "Sites développés par Promarket. Fenua Spot, l’annuaire de Polynésie française, et Mon Courtier Assure, courtier à Nantes.",
   alternates: { canonical: "/realisations" },
   openGraph: {
     title: "Réalisations",
     description:
-      "Sites développés par Promarket. La fiche Fenua Spot décrit l’annuaire de la Polynésie française tel qu’il est en ligne.",
+      "Sites développés par Promarket. Fenua Spot, l’annuaire de Polynésie française, et Mon Courtier Assure, courtier à Nantes.",
     type: "website",
     url: "/realisations",
     locale: "fr_FR",
@@ -39,6 +39,18 @@ export default function RealisationsPage() {
           </p>
           <p>
             <Link href="/realisations/fenua-spot">Lire l’étude de cas</Link>
+          </p>
+        </article>
+        <article className="card">
+          <p className="tag">Courtier</p>
+          <p className="card-title">
+            <Link href="/realisations/mon-courtier-assure">Mon Courtier Assure</Link>
+          </p>
+          <p className="muted">
+            Le site du courtier à Nantes : pages, blog, présence locale, et le travail web de Promarket.
+          </p>
+          <p>
+            <Link href="/realisations/mon-courtier-assure">Lire l’étude de cas</Link>
           </p>
         </article>
       </div>
