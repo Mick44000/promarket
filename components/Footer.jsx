@@ -8,6 +8,7 @@ const offer = [
   ["/migration-gohighlevel", "Transfert des données"],
   ["/crm-coachs", "Coachs et formateurs"],
   ["/agence-gohighlevel-nantes", "Agence à Nantes"],
+  ["/realisations", "Réalisations"],
 ];
 
 const legal = [
