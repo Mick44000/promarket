@@ -3,12 +3,12 @@ import Link from "next/link";
 export const metadata = {
   title: "Réalisations",
   description:
-    "Sites développés par Promarket. Fenua Spot, l’annuaire de Polynésie française, et Mon Courtier Assure, courtier à Nantes.",
+    "Sites développés par Promarket. Fenua Spot, Mon Courtier Assure, et My Goddess Revolution.",
   alternates: { canonical: "/realisations" },
   openGraph: {
     title: "Réalisations",
     description:
-      "Sites développés par Promarket. Fenua Spot, l’annuaire de Polynésie française, et Mon Courtier Assure, courtier à Nantes.",
+      "Sites développés par Promarket. Fenua Spot, Mon Courtier Assure, et My Goddess Revolution.",
     type: "website",
     url: "/realisations",
     locale: "fr_FR",
@@ -51,6 +51,18 @@ export default function RealisationsPage() {
           </p>
           <p>
             <Link href="/realisations/mon-courtier-assure">Lire l’étude de cas</Link>
+          </p>
+        </article>
+        <article className="card">
+          <p className="tag">Formations</p>
+          <p className="card-title">
+            <Link href="/realisations/my-goddess-revolution">My Goddess Revolution</Link>
+          </p>
+          <p className="muted">
+            Le site des formations : agenda, annuaire, inscriptions, et l’automatisation mise en place.
+          </p>
+          <p>
+            <Link href="/realisations/my-goddess-revolution">Lire l’étude de cas</Link>
           </p>
         </article>
       </div>
